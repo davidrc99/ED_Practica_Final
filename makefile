@@ -15,6 +15,9 @@ clean:
 rebuild:
 	clean $(BIN)/*
 
+mrproper : clean
+		-rm $(BIN)/* doc/html/*
+
 documentacion:
 	echo "Creando la Documentación..."
 	doxygen Doxyfile
