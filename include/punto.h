@@ -8,19 +8,42 @@ private:
   double lat;
   double lng;
   string descripcion;
+
+  void Copiar(const Punto &p){
+    lat = p.lat;
+    lng = p.lng;
+    descripcion = p.descripcion;
+  }
+
 public:
-  Punto(){
-    lat=0;
-    lng=0;
-    descripcion=" ";
+  Punto();
+
+  Punto(double lat_n, double lng_n,string des_n)
+
+  Punto(const Punto &p);
+
+  double GetLongitud();
+
+  double GetLatitud();
+
+  string GetDescripcion();
+
+  void SetLongitud(double valor);
+
+  void SetLatitud(double valor);
+
+  void SetDescripcion(string valor);
+
+  Punto & operator=(const Punto &p){
+      // if (this!=&p){
+      //     Copiar(p);
+      // }
+      // return *this;
   }
 
-  Punto(double lat2, double lng2,string descripcion2){
-    lat=lat2;
-    lng=lng2;
-    descripcion=descripcion2;
-  }
+  //Operador ==
 
+  //Operador entrada y Salida (descomentar funcion en pais)
 
 };
 #endif
