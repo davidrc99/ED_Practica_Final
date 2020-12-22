@@ -1,4 +1,5 @@
-#include "imagen.h"
+#include "../include/imagen.h"
+#include "../include/imagenES.h"
 void Imagen::Borrar(){
   for (int i=0;i<nf;i++)
     delete[]data[i];
@@ -175,9 +176,4 @@ Imagen Imagen::ExtraeImagen(int posi,int posj,int dimi,int dimj){
      for (int j=posj;j<dimj;j++)
         Iaux.data[i-posi][j-posj]=data[i][j];
    return Iaux;
-}
-
-
-void Imagen::funcion_prueba(){
-  cout << "Función de imagen " << endl;
 }

@@ -1,6 +1,6 @@
 #include <iostream>
-#include "pais.h"
-#include "punto.h"
+#include "../include/pais.h"
+#include "../include/punto.h"
 
 
 using namespace std;
@@ -25,6 +25,6 @@ bool Pais::operator==(const Pais &P)const{
   return pais==P.pais;
 }
 
-bool Pais::operator==(const Punto &P)const{
-  return p==P;
-}
+// bool Pais::operator==(const Punto &P)const{
+//   return p==P;
+// }

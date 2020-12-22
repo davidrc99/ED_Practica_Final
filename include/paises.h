@@ -1,7 +1,9 @@
 #ifndef __PAISES__
 #define __PAISES__
-#include "pais.h"
+#include "../include/pais.h"
+#include "../include/punto.h"
 #include <set>
+#include <iostream>
 using namespace std;
 class Paises{
   private:
@@ -10,7 +12,6 @@ class Paises{
       Paises(){}
       void Insertar(const Pais &P);
       void Borrar(const Pais &P);
-      void funcion_prueba();
       class const_iterator;
 
 	class iterator{
@@ -128,13 +129,13 @@ class Paises{
     R=rlocal;
     return is;
 	}
-	friend ostream & operator<<(ostream & os, const Paises &R){
-
-    Paises::const_iterator it;
-      for (it=R.begin(); it!=R.end(); ++it){
-        os<<*it<<"\t";
-      }
-    return os;
-	}
+	// friend ostream & operator<<(ostream & os, const Paises &R){
+  //
+  //   Paises::const_iterator it;
+  //     for (it=R.begin(); it!=R.end(); ++it){
+  //       os<<*it<<"\t";
+  //     }
+  //   return os;
+	// }
 };
 #endif

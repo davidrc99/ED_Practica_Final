@@ -1,6 +1,9 @@
 #ifndef __PAIS__
 #define __PAIS__
 #include "punto.h"
+#include <string>
+#include <iostream>
+using namespace std;
 class Pais{
   private:
     Punto p;
@@ -27,9 +30,9 @@ class Pais{
       return is;
     }
 
-    friend ostream & operator<<(ostream & os, const Pais &P){
-      os<<P.p<<" "<<P.pais<<" "<<P.bandera<<endl;
-      return os;
-    }
+    // friend ostream & operator<<(ostream & os, const Pais &P){
+    //   os<<P.p<<" "<<P.pais<<" "<<P.bandera<<endl;
+    //   return os;
+    // }
 };
 #endif

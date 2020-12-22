@@ -3,6 +3,8 @@
 #include "../include/punto.h"
 #include <list>
 #include <string>
+#include <iostream>
+using namespace std;
 class Ruta{
  private:
    list<Punto> puntos;

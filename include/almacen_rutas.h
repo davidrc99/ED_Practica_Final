@@ -2,6 +2,9 @@
 #define __ALMACEN_RUTAS__
 #include "../include/punto.h"
 #include "../include/ruta.h"
+#include <map>
+#include <iostream>
+using namespace std;
 class Almacen_rutas{
 private:
   map<string,Ruta> rutas;
@@ -9,9 +12,6 @@ private:
 
 public:
   Almacen_rutas(){}
-  void funcion_prueba();
-
-
 
 };
 #endif

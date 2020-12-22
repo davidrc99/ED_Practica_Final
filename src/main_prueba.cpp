@@ -1,6 +1,7 @@
 #include "../include/punto.h"
 #include "../include/paises.h"
 #include "../include/almacen_rutas.h"
+#include "../include/imagen.h"
 
 using namespace std;
 
