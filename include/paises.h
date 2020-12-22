@@ -8,14 +8,10 @@ class Paises{
     set<Pais> datos;
   public:
       Paises(){}
-      void Insertar(const Pais &P){
-	  datos.insert(P);
-      }
-      void Borrar(const Pais &P){
-	  datos.erase(P);
-      }
-
+      void Insertar(const Pais &P);
+      void Borrar(const Pais &P);
       class const_iterator;
+      
 	class iterator{
 	private:
 	    set<Pais>::iterator p;
