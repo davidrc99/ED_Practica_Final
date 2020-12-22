@@ -1,6 +1,6 @@
 #ifndef __PAISES__
 #define __PAISES__
-#include "Pais.h"
+#include "pais.h"
 #include <set>
 using namespace std;
 class Paises{
@@ -14,7 +14,7 @@ class Paises{
       void Borrar(const Pais &P){
 	  datos.erase(P);
       }
-      
+
       class const_iterator;
 	class iterator{
 	private:
@@ -25,7 +25,7 @@ class Paises{
 		++p;
 		return * this;
 	    }
-	    
+
 	    iterator & operator --(){
 		--p;
 		return * this;
@@ -41,7 +41,7 @@ class Paises{
 	    }
 	    friend class Paises;
 	    friend class const_iterator;
-	};    
+	};
 	class const_iterator{
 	private:
 	    set<Pais>::const_iterator p;
@@ -49,17 +49,17 @@ class Paises{
 	    const_iterator(){}
 	    const_iterator(const iterator & it){
 	      p=it.p;
-	      
+
 	    }
 	    const_iterator & operator=(const iterator & it){
 		p=it.p;
 		return *this;
-	    }	
+	    }
 	    const_iterator & operator ++(){
 		++p;
 		return * this;
 	    }
-	    
+
 	    const_iterator & operator --(){
 		--p;
 		return * this;
@@ -74,14 +74,14 @@ class Paises{
 		  return *p;
 	    }
 	    friend class Paises;
-	   
+
 	};
 	iterator begin(){
 	  iterator it;
 	  it.p = datos.begin();
 	  return it;
-	}  
-	
+	}
+
 	const_iterator begin()const{
 	  const_iterator it;
 	  it.p = datos.begin();
@@ -117,18 +117,18 @@ class Paises{
 	      if (is.peek()=='#'){
 		string a;
 		getline(is,a);
-	      }	
-	      
+	      }
+
 	      Pais P;
 	      while (is>>P){
 		  rlocal.Insertar(P);
-		  
+
 	      }
 	      R=rlocal;
 	      return is;
 	}
 	friend ostream & operator<<(ostream & os, const Paises &R){
-	  
+
 	    Paises::const_iterator it;
 	    for (it=R.begin(); it!=R.end(); ++it){
 		os<<*it<<"\t";
@@ -137,4 +137,3 @@ class Paises{
 	}
 };
 #endif
-
