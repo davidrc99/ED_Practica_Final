@@ -10,34 +10,40 @@ class Paises{
       Paises(){}
       void Insertar(const Pais &P);
       void Borrar(const Pais &P);
+      void funcion_prueba();
       class const_iterator;
-      
+
 	class iterator{
 	private:
 	    set<Pais>::iterator p;
 	public:
 	    iterator(){}
 	    iterator & operator ++(){
-		++p;
-		return * this;
+	      ++p;
+	      return * this;
 	    }
 
 	    iterator & operator --(){
-		--p;
-		return * this;
+        --p;
+        return * this;
 	    }
+
 	    bool operator ==(const iterator  & it){
-		return it.p ==p;
+        return it.p ==p;
 	    }
+
 	    bool operator !=(const iterator  & it){
-		return it.p !=p;
+        return it.p !=p;
 	    }
+
 	     const Pais & operator*()const{
-		  return *p;
+         return *p;
 	    }
+
 	    friend class Paises;
 	    friend class const_iterator;
 	};
+
 	class const_iterator{
 	private:
 	    set<Pais>::const_iterator p;
@@ -45,29 +51,29 @@ class Paises{
 	    const_iterator(){}
 	    const_iterator(const iterator & it){
 	      p=it.p;
-
 	    }
-	    const_iterator & operator=(const iterator & it){
-		p=it.p;
-		return *this;
+
+      const_iterator & operator=(const iterator & it){
+        p=it.p;
+        return *this;
 	    }
 	    const_iterator & operator ++(){
-		++p;
-		return * this;
+        ++p;
+        return * this;
 	    }
 
 	    const_iterator & operator --(){
-		--p;
-		return * this;
+        --p;
+        return * this;
 	    }
 	    bool operator ==(const const_iterator  & it){
-		return it.p ==p;
+        return it.p ==p;
 	    }
 	    bool operator !=(const const_iterator  & it){
-		return it.p !=p;
+        return it.p !=p;
 	    }
 	    const Pais &operator*()const {
-		  return *p;
+    	  return *p;
 	    }
 	    friend class Paises;
 
@@ -108,28 +114,27 @@ class Paises{
 	    return it;
 	}
 	friend istream & operator>>(istream & is, Paises & R){
-	      Paises rlocal;
-	      //leemos el comentario
-	      if (is.peek()=='#'){
-		string a;
-		getline(is,a);
-	      }
+    Paises rlocal;
+    //leemos el comentario
+    if (is.peek()=='#'){
+      string a;
+      getline(is,a);
+    }
 
-	      Pais P;
-	      while (is>>P){
-		  rlocal.Insertar(P);
-
-	      }
-	      R=rlocal;
-	      return is;
+    Pais P;
+    while (is>>P){
+      rlocal.Insertar(P);
+    }
+    R=rlocal;
+    return is;
 	}
 	friend ostream & operator<<(ostream & os, const Paises &R){
 
-	    Paises::const_iterator it;
-	    for (it=R.begin(); it!=R.end(); ++it){
-		os<<*it<<"\t";
-	    }
-	    return os;
+    Paises::const_iterator it;
+      for (it=R.begin(); it!=R.end(); ++it){
+        os<<*it<<"\t";
+      }
+    return os;
 	}
 };
 #endif

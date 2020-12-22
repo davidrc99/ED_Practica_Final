@@ -11,3 +11,7 @@ void Paises::Insertar(const Pais &P){
 void Paises::Borrar(const Pais &P){
   datos.erase(P);
 }
+
+void Paises::funcion_prueba(){
+  cout << " Funcion de Paises " << endl;
+}

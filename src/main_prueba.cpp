@@ -8,7 +8,9 @@ int main(){
   Punto punto;
   Paises paises;
   Almacen_rutas almacen;
+  Imagen imagen;
 
+  imagen.funcion_prueba();
   punto.funcion_prueba();
   paises.funcion_prueba();
   almacen.funcion_prueba();
