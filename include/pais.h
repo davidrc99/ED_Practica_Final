@@ -9,30 +9,27 @@ class Pais{
 
   public:
     Pais(){}
-    Punto GetPunto()const { return p;}
-    string GetPais()const{ return pais;}
-    string GetBandera()const{ return bandera;}
+    Punto GetPunto()const;
+    string GetPais()const;
+    string GetBandera()const;
 
-    bool operator<(const Pais &P)const{
-	return pais<P.pais;
-    }
-    bool operator==(const Pais &P)const{
-	return pais==P.pais;
-    }
-     bool operator==(const Punto &P)const{
-	return p==P;
-    }
+    bool operator<(const Pais &P)const;
+
+    bool operator==(const Pais &P)const;
+
+     bool operator==(const Punto &P)const;
+
     friend istream & operator>>(istream & is, Pais & P){
-        double lat,lng;
+      double lat,lng;
+      is>>lat>>lng>>P.pais>>P.bandera;
 
-	is>>lat>>lng>>P.pais>>P.bandera;
-
-	P.p=Punto(lat,lng,"");
-	return is;
+      P.p=Punto(lat,lng,"");
+      return is;
     }
+
     friend ostream & operator<<(ostream & os, const Pais &P){
-	os<<P.p<<" "<<P.pais<<" "<<P.bandera<<endl;
-	return os;
+      os<<P.p<<" "<<P.pais<<" "<<P.bandera<<endl;
+      return os;
     }
 };
 #endif
