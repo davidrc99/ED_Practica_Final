@@ -1,0 +1,9 @@
+*.png
+*.aux
+*.log
+*.gz
+*.toc
+
+/Estudiar
+/TEORIA/doxygen
+/PRACTICA/ED_Practica_Final/datos
