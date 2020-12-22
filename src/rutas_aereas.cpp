@@ -1,6 +1,7 @@
-#include "imagen.h"
-#include "almacen_rutas.h"
-#include "paises.h"
+#include "../include/punto.h"
+#include "../include/paises.h"
+#include "../include/almacen_rutas.h"
+#include "../include/imagen.h"
 #include <iostream>
 #include <cmath>
 #include <fstream>
@@ -140,7 +141,7 @@ int main(int argc, char * argv[]){
   Imagen avion;
   avion.LeerImagen(argv[5],argv[6]);
 
-  Almacen_Rutas Ar;
+  Almacen_rutas Ar;
   f.close();
    f.open (argv[4]);
   f>>Ar;

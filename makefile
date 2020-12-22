@@ -7,16 +7,16 @@ FLAGS = -Wall -g -I$(INC) -c
 
 compilador:=g++
 
-main: $(BIN)/main_prueba
-	./$(BIN)/main_prueba
+main: $(BIN)/rutas_aereas
+	./$(BIN)/rutas_aereas
 
-$(BIN)/main_prueba: $(OBJ)/main_prueba.o $(LIB)/libfunciones.a
+$(BIN)/rutas_aereas: $(OBJ)/rutas_aereas.o $(LIB)/libfunciones.a
 	$(compilador) -o $@ $< -lfunciones -L$(LIB)
 
-$(OBJ)/main_prueba.o: $(SRC)/main_prueba.cpp $(INC)/imagen.h $(INC)/almacen_rutas.h $(INC)/ruta.h $(INC)/paises.h $(INC)/punto.h $(INC)/pais.h
+$(OBJ)/rutas_aereas.o: $(SRC)/rutas_aereas.cpp $(INC)/imagen.h $(INC)/almacen_rutas.h $(INC)/ruta.h $(INC)/paises.h $(INC)/punto.h $(INC)/pais.h
 	$(compilador) $(FLAGS) $< -o $@
 
-$(LIB)/libfunciones.a: $(OBJ)/imagen.o $(OBJ)/almacen_rutas.o $(OBJ)/paises.o $(OBJ)/pais.o $(OBJ)/punto.o $(OBJ)/ruta.o $(OBJ)/imagenES.o    
+$(LIB)/libfunciones.a: $(OBJ)/imagen.o $(OBJ)/almacen_rutas.o $(OBJ)/paises.o $(OBJ)/pais.o $(OBJ)/punto.o $(OBJ)/ruta.o $(OBJ)/imagenES.o
 	ar -rvs $@ $^
 
 $(OBJ)/imagen.o: $(SRC)/imagen.cpp $(INC)/imagen.h $(INC)/imagenES.h
