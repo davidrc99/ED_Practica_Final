@@ -3,6 +3,12 @@
 #include <string>
 #include <iostream>
 using namespace std;
+
+void QuitaSeparadores(istream &is){
+  while(is && (is.peek()=='\t' || is.peek()==' ' || is.peek()=='\n'))
+    is.get();
+}
+
 class Punto{
 private:
   double lat;
