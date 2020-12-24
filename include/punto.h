@@ -24,7 +24,7 @@ private:
 public:
   Punto();
 
-  Punto(double lat_n, double lng_n,string des_n)
+  Punto(double lat_n, double lng_n,string des_n);
 
   Punto(const Punto &p);
 
@@ -42,15 +42,15 @@ public:
 
   Punto & operator=(const Punto &p);
 
-  Bool & operator==(const Punto &p)const;
+  bool & operator==(const Punto &p)const;
 
   friend ostream & operator<<(ostream & os, const Punto & P){
-    os << "(" << lat << "," << lng << ")";
+    os << "(" << P.lat << "," << P.lng << ")";
     return os;
   }
 
   friend istream & operator>>(istream & is, Punto & P){
-    QuitaSeparadores(is);
+    //QuitaSeparadores(is);
     string lat,lng;
     string aux;
 
@@ -62,6 +62,8 @@ public:
     double lng_d = stod(lng);
     P.SetLatitud(lat_d);
     P.SetLongitud(lng_d);
+
+    return is;
   }
 };
 #endif

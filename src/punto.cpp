@@ -49,7 +49,7 @@ Punto & Punto::operator=(const Punto &p){
     return *this;
 }
 
-Bool & operator==(const Punto &p)const {
+bool & operator==(const Punto &p)const {
   if(this==&p)
     return true;
 
