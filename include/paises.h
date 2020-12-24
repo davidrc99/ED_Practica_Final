@@ -129,13 +129,13 @@ class Paises{
     R=rlocal;
     return is;
 	}
-	// friend ostream & operator<<(ostream & os, const Paises &R){
-  //
-  //   Paises::const_iterator it;
-  //     for (it=R.begin(); it!=R.end(); ++it){
-  //       os<<*it<<"\t";
-  //     }
-  //   return os;
-	// }
+	friend ostream & operator<<(ostream & os, const Paises &R){
+
+    Paises::const_iterator it;
+      for (it=R.begin(); it!=R.end(); ++it){
+        os<<*it<<"\t";
+      }
+    return os;
+	}
 };
 #endif

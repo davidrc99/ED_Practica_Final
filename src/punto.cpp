@@ -15,7 +15,7 @@ Punto::Punto(double lat_n, double lng_n,string des_n){
 }
 
 Punto::Punto(const Punto &p){
-  copiar(p);  //Implementar
+  Copiar(p);
 }
 
 double Punto::GetLongitud(){
@@ -40,4 +40,18 @@ void Punto::SetLatitud(double valor){
 
 void Punto::SetDescripcion(string valor){
   descripcion = valor;
+}
+
+Punto & Punto::operator=(const Punto &p){
+    if (this!=&p){
+        Copiar(p);
+    }
+    return *this;
+}
+
+Bool & operator==(const Punto &p)const {
+  if(this==&p)
+    return true;
+
+  return false;
 }

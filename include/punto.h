@@ -4,11 +4,6 @@
 #include <iostream>
 using namespace std;
 
-void QuitaSeparadores(istream &is){
-  while(is && (is.peek()=='\t' || is.peek()==' ' || is.peek()=='\n'))
-    is.get();
-}
-
 class Punto{
 private:
   double lat;
@@ -19,6 +14,11 @@ private:
     lat = p.lat;
     lng = p.lng;
     descripcion = p.descripcion;
+  }
+
+  void QuitaSeparadores(istream &is){
+    while(is && (is.peek()=='\t' || is.peek()==' ' || is.peek()=='\n'))
+      is.get();
   }
 
 public:
@@ -40,16 +40,28 @@ public:
 
   void SetDescripcion(string valor);
 
-  Punto & operator=(const Punto &p){
-      // if (this!=&p){
-      //     Copiar(p);
-      // }
-      // return *this;
+  Punto & operator=(const Punto &p);
+
+  Bool & operator==(const Punto &p)const;
+
+  friend ostream & operator<<(ostream & os, const Punto & P){
+    os << "(" << lat << "," << lng << ")";
+    return os;
   }
 
-  //Operador ==
+  friend istream & operator>>(istream & is, Punto & P){
+    QuitaSeparadores(is);
+    string lat,lng;
+    string aux;
 
-  //Operador entrada y Salida (descomentar funcion en pais)
+    getline(cin,aux,'(');
+    getline(cin,lat,',');
+    getline(cin,lng,')');
 
+    double lat_d = stod(lat);
+    double lng_d = stod(lng);
+    P.SetLatitud(lat_d);
+    P.SetLongitud(lng_d);
+  }
 };
 #endif
