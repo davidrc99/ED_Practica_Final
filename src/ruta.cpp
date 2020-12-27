@@ -38,6 +38,10 @@ bool Ruta::estaPunto(const Punto & p){
   return false;
 }
 
+bool estaVacia(){
+  return puntos.empty();
+}
+
 void Ruta::SetCodigo(const string valor){
   codigo = valor;
 }

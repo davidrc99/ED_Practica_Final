@@ -30,6 +30,8 @@ class Ruta{
 
     bool estaPunto(const Punto & p);
 
+    bool estaVacia();
+
     void SetCodigo(const string valor);
 
     void SetPuntos(const list<Punto> & puntos_n);
