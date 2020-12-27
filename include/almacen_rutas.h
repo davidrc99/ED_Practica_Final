@@ -13,10 +13,32 @@ public:
 
   Ruta GetRuta(string codigo);
   list<Ruta> GetRutas(Punto punto);
-
+  void Insertar(const string &clave, const Ruta &ruta);
+  void Borrar(const string &clave);
   Almacen_rutas & operator=(const Almacen_rutas &Ar);
-  friend ostream & operator<<(ostream & os, const Almacen_rutas &Ar);
-  friend istream & operator>>(istream & is, const Almacen_rutas &Ar);
+  friend ostream & operator<<(ostream & os, const Almacen_rutas &Ar){
+    map<string,Ruta> it;
+    os << "#[CODIGO] [RUTA]" << endl;
+    for ( it = rutas.begin(); it < rutas.end(); it++) {
+      os << it.first << " " << it.second;
+      os << endl;
+    }
+
+    return os;
+  }
+  friend istream & operator>>(istream & is, const Almacen_rutas &Ar){
+    Almacen_rutas Ar_aux;
+    if (is.peek()=='#'){
+      string a;
+      getline(is,a);
+    }
+    Ruta R;
+    while(is>>R){
+      Ar_aux.Insertar(R.GetCodigo(),R);
+    }
+    Ar =Ar_aux;
+    return is;
+  }
 
   //////////////////
   class iterator{

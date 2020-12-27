@@ -40,12 +40,15 @@ class Ruta{
 
     Ruta & operator=(const Ruta &r);
 
+    bool & operator==(const Ruta &r)const;
+
+    bool & operator!=(const Ruta &r)const;
+
     friend ostream & operator<<(ostream & os, const Ruta & r){
-      os << r.codigo << " " << puntos.size() << " ";
+      os << r.codigo << " "  << " ";
       for (list<int>::iterator it = puntos.begin(); it < puntos.end(); ++it) {
         cout << *it << " ";
       }
-      cout << endl; ////////////
       return os;
     }
 

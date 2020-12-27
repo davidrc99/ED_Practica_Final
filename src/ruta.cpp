@@ -38,7 +38,7 @@ bool Ruta::estaPunto(const Punto & p){
   return false;
 }
 
-bool estaVacia(){
+bool Ruta::estaVacia(){
   return puntos.empty();
 }
 
@@ -59,4 +59,28 @@ Ruta & Ruta::operator=(const Ruta &r){
       Copiar(r);
   }
   return *this;
+}
+
+bool & Ruta::operator==(const Ruta &r)const{
+  if(puntos.size() != r.size() || puntos.codigo != r.codigo){
+    return false;
+  }else{
+    list<Punto> it1 = this.begin();
+    list<Punto> it2 = r.begin();
+
+    while(it1 != this.end() && it2 != r.end()){
+      if(*it1 != *it2){
+        return false;
+      }else{
+        it1++;
+        it2++;
+      }
+    }
+
+    return true;
+  }
+}
+
+bool & Ruta::operator!=(const Ruta &r)const{
+  return !(this==r);
 }
