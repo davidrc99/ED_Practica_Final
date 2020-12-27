@@ -10,8 +10,11 @@ class Ruta{
    list<Punto> puntos;
    string codigo;
 
-   void Copiar(const Ruta &r);
-   void Borrar(const Ruta &r);
+   void Copiar(const Ruta &r){
+     puntos = r.puntos;
+     codigo = r.codigo;
+   }
+
  public:
     Ruta();
 
@@ -35,10 +38,31 @@ class Ruta{
 
     Ruta & operator=(const Ruta &r);
 
-    friend ostream & operator<<(ostream & os, const Ruta & r){}
+    friend ostream & operator<<(ostream & os, const Ruta & r){
+      os << r.codigo << " " << puntos.size() << " ";
+      for (list<int>::iterator it = puntos.begin(); it < puntos.end(); ++it) {
+        cout << *it << " ";
+      }
+      cout << endl; ////////////
+      return os;
+    }
 
-    friend istream & operator>>(istream & is, Ruta & r){}
-
+    friend istream & operator>>(istream & is, Ruta & r){
+      //R1 5 puntos
+      string codigo_n;
+      list<Punto> puntos_n;
+      int tamanio;
+      Punto punto_aux;
+      is >> codigo_n >> tamanio;
+      puntos_n.resize(tamanio);
+      for (int i = 0; i < tamanio; i++) {
+        is >> punto_aux;
+        puntos_n.push_back(punto_aux);
+      }
+      r.codigo = codigo_n;
+      r.puntos = puntos_n;
+      return is;
+    }
 
 };
 #endif
