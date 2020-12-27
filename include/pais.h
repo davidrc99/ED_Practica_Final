@@ -30,9 +30,9 @@ class Pais{
       return is;
     }
 
-    // friend ostream & operator<<(ostream & os, const Pais &P){
-    //   os<<P.p<<" "<<P.pais<<" "<<P.bandera<<endl;
-    //   return os;
-    // }
+    friend ostream & operator<<(ostream & os, const Pais &P){
+      os<<P.p<<" "<<P.pais<<" "<<P.bandera<<endl;
+      return os;
+    }
 };
 #endif

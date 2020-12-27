@@ -3,6 +3,7 @@
 #include <string>
 #include <iostream>
 using namespace std;
+
 class Punto{
 private:
   double lat;
@@ -15,10 +16,15 @@ private:
     descripcion = p.descripcion;
   }
 
+  void QuitaSeparadores(istream &is){
+    while(is && (is.peek()=='\t' || is.peek()==' ' || is.peek()=='\n'))
+      is.get();
+  }
+
 public:
   Punto();
 
-  Punto(double lat_n, double lng_n,string des_n)
+  Punto(double lat_n, double lng_n,string des_n);
 
   Punto(const Punto &p);
 
@@ -34,16 +40,30 @@ public:
 
   void SetDescripcion(string valor);
 
-  Punto & operator=(const Punto &p){
-      // if (this!=&p){
-      //     Copiar(p);
-      // }
-      // return *this;
+  Punto & operator=(const Punto &p);
+
+  bool & operator==(const Punto &p)const;
+
+  friend ostream & operator<<(ostream & os, const Punto & P){
+    os << "(" << P.lat << "," << P.lng << ")";
+    return os;
   }
 
-  //Operador ==
+  friend istream & operator>>(istream & is, Punto & P){
+    //QuitaSeparadores(is);
+    string lat,lng;
+    string aux;
 
-  //Operador entrada y Salida (descomentar funcion en pais)
+    getline(cin,aux,'(');
+    getline(cin,lat,',');
+    getline(cin,lng,')');
 
+    double lat_d = stod(lat);
+    double lng_d = stod(lng);
+    P.SetLatitud(lat_d);
+    P.SetLongitud(lng_d);
+
+    return is;
+  }
 };
 #endif
