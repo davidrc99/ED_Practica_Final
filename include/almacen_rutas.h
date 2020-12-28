@@ -17,10 +17,10 @@ public:
   void Borrar(const string &clave);
   Almacen_rutas & operator=(const Almacen_rutas &Ar);
   friend ostream & operator<<(ostream & os, const Almacen_rutas &Ar){
-    map<string,Ruta> it;
+    map<string,Ruta>::iterator it;
     os << "#[CODIGO] [RUTA]" << endl;
-    for ( it = rutas.begin(); it < rutas.end(); it++) {
-      os << it.first << " " << it.second;
+    for ( it = Ar.rutas.begin(); it != Ar.rutas.end(); it++) {
+      os << it->first << " " << it->second;
       os << endl;
     }
 

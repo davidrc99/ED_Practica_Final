@@ -22,8 +22,6 @@ class Ruta{
 
     Ruta(const Ruta &r);
 
-    ~Ruta();
-
     list<Punto> GetListaPuntos();
 
     string GetCodigo();
@@ -40,26 +38,25 @@ class Ruta{
 
     Ruta & operator=(const Ruta &r);
 
-    bool & operator==(const Ruta &r)const;
+    bool operator==(const Ruta &r)const;
 
-    bool & operator!=(const Ruta &r)const;
+    bool operator!=(const Ruta &r)const;
 
     friend ostream & operator<<(ostream & os, const Ruta & r){
-      os << r.codigo << " "  << " ";
-      for (list<int>::iterator it = puntos.begin(); it < puntos.end(); ++it) {
+      os << r.codigo << " ";
+      list<Punto>::const_iterator it;
+      for (it = r.puntos.begin(); it != r.puntos.end(); ++it) {
         cout << *it << " ";
       }
       return os;
     }
 
     friend istream & operator>>(istream & is, Ruta & r){
-      //R1 5 puntos
       string codigo_n;
       list<Punto> puntos_n;
       int tamanio;
       Punto punto_aux;
       is >> codigo_n >> tamanio;
-      puntos_n.resize(tamanio);
       for (int i = 0; i < tamanio; i++) {
         is >> punto_aux;
         puntos_n.push_back(punto_aux);

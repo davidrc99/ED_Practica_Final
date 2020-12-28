@@ -42,7 +42,9 @@ public:
 
   Punto & operator=(const Punto &p);
 
-  bool & operator==(const Punto &p)const;
+  bool operator==(const Punto &p)const ;
+
+  bool operator!=(const Punto &p)const ;
 
   friend ostream & operator<<(ostream & os, const Punto & P){
     os << "(" << P.lat << "," << P.lng << ")";

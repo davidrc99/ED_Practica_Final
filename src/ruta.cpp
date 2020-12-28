@@ -2,10 +2,7 @@
 #include "../include/ruta.h"
 #include "../include/punto.h"
 
-Ruta::Ruta(){
-  puntos = null;
-  codigo = " ";
-}
+Ruta::Ruta(){}
 
 Ruta::Ruta(list<Punto> puntos_n, string codigo_n){
   puntos = puntos_n;
@@ -14,11 +11,6 @@ Ruta::Ruta(list<Punto> puntos_n, string codigo_n){
 
 Ruta::Ruta(const Ruta &r){
   Copiar(r);
-}
-
-Ruta::~Ruta(){
-  puntos = null;
-  codigo = " ";
 }
 
 list<Punto> Ruta::GetListaPuntos(){
@@ -30,7 +22,7 @@ string Ruta::GetCodigo(){
 }
 
 bool Ruta::estaPunto(const Punto & p){
-  for (list<int>::iterator it = puntos.begin(); it < puntos.end(); ++it) {
+  for (list<Punto>::iterator it = puntos.begin(); it != puntos.end(); ++it) {
     if(*it == p){
       return true;
     }
@@ -61,14 +53,14 @@ Ruta & Ruta::operator=(const Ruta &r){
   return *this;
 }
 
-bool & Ruta::operator==(const Ruta &r)const{
-  if(puntos.size() != r.size() || puntos.codigo != r.codigo){
+bool Ruta::operator==(const Ruta &r)const{
+  if(this->puntos.size() != r.puntos.size() || this->codigo != r.codigo){
     return false;
   }else{
-    list<Punto> it1 = this.begin();
-    list<Punto> it2 = r.begin();
+    list<Punto>::const_iterator it1 = this->puntos.begin();
+    list<Punto>::const_iterator it2 = r.puntos.begin();
 
-    while(it1 != this.end() && it2 != r.end()){
+    while(it1 != this->puntos.end() && it2 != r.puntos.end()){
       if(*it1 != *it2){
         return false;
       }else{
@@ -81,6 +73,22 @@ bool & Ruta::operator==(const Ruta &r)const{
   }
 }
 
-bool & Ruta::operator!=(const Ruta &r)const{
-  return !(this==r);
+bool Ruta::operator!=(const Ruta &r)const{
+  if(this->puntos.size() != r.puntos.size() || this->codigo != r.codigo){
+    return true;
+  }else{
+    list<Punto>::const_iterator it1 = this->puntos.begin();
+    list<Punto>::const_iterator it2 = r.puntos.begin();
+
+    while(it1 != this->puntos.end() && it2 != r.puntos.end()){
+      if(*it1 != *it2){
+        return true;
+      }else{
+        it1++;
+        it2++;
+      }
+    }
+
+    return false;
+  }
 }

@@ -35,7 +35,7 @@ void Punto::SetLongitud(double valor){
 }
 
 void Punto::SetLatitud(double valor){
-  lng = lat;
+  lat = valor;
 }
 
 void Punto::SetDescripcion(string valor){
@@ -49,9 +49,16 @@ Punto & Punto::operator=(const Punto &p){
     return *this;
 }
 
-bool & operator==(const Punto &p)const {
-  if(this==&p)
+bool Punto::operator==(const Punto &p)const {
+  if(lat==p.lat && lng==p.lng && descripcion==p.descripcion)
     return true;
 
   return false;
+}
+
+bool Punto::operator!=(const Punto &p)const {
+  if(lat==p.lat && lng==p.lng && descripcion==p.descripcion)
+    return false;
+
+  return true;
 }

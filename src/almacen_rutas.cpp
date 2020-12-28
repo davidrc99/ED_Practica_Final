@@ -20,7 +20,7 @@ void Almacen_rutas::Insertar(const string &clave, const Ruta &ruta){
 list<Ruta> Almacen_rutas::GetRutas(Punto punto){
   list<Ruta> lista_rutas;
   map<string,Ruta>::iterator it;
-  for ( it = rutas.begin(); it < rutas.end(); ++it) {
+  for ( it = rutas.begin(); it != rutas.end(); ++it) {
     if(it.second.estaPunto(punto)){
       lista_rutas.insert(*it.second);
     }
@@ -39,5 +39,5 @@ void Almacen_rutas::Borrar(const string &clave){
 }
 
 Almacen_rutas & Almacen_rutas::operator=(const Almacen_rutas &Ar){
-  this=Ar;
+  //IMPLEMENTAR
 }
