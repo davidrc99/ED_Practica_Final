@@ -44,7 +44,7 @@ public:
     for (int i = 0; i < num_rutas; i++){
         is >> R;
         Ar.Insertar(R.GetCodigo(),R);
-    }
+      }
     return is;
   }
 
