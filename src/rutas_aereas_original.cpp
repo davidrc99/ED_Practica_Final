@@ -141,55 +141,55 @@ int main(int argc, char * argv[]){
   Imagen avion;
   avion.LeerImagen(argv[5],argv[6]);
 
-  // Almacen_rutas Ar;
-  // f.close();
-  //  f.open (argv[4]);
-  // f>>Ar;
-  // cout<<"Las rutas: "<<endl<<Ar;
-  // cout<<"Dime el codigo de una ruta"<<endl;
-  // string a;
-  // cin>>a;
-  // Ruta R=Ar.GetRuta(a);
-  //
-  // Ruta::iterator it,it_before;
-  // Paises::iterator ip_before =Pses.end();
-  // Paises::iterator ip=Pses.end();
-  // Imagen i_ban_inicio;
-  // int posi_ini,posj_ini;
-  // for (it=R.begin(); it!=R.end();++it){
-  //     Punto pto = (*it);
-  //
-  //     ip_before = ip;
-  //     ip=Pses.find(pto);
-  //
-  //     string name = (*ip).GetBandera();
-  //     string n_com = argv[3]+name;
-  //
-  //     Imagen i_ban;
-  //     i_ban.LeerImagen(n_com.c_str(),"");
-  //
-	// cout<<(*ip).GetPais()<<" ";
-	// int x =  (int) ((I.num_cols()/360.0) * (180 + pto.GetLongitud()));
-	// int y =  (int) ((I.num_filas()/180.0) * (90 - pto.GetLatitud()));
-	// if (ip_before!=Pses.end() ){
-  //
-	//   int x_old =(int) ((I.num_cols()/360.0) * (180 + (*it_before).GetLongitud()));
-	//   int y_old =  (int) ((I.num_filas()/180.0) * (90 -(*it_before).GetLatitud()));
-  //
-	//   Pintar(y_old-avion.num_filas()/2 ,y-avion.num_filas()/2, x_old-avion.num_cols()/2,x-avion.num_cols()/2,I,avion,50,50);
-	// }
-  //
-	// I.PutImagen(y-i_ban.num_filas()/2,x-i_ban.num_cols()/2,i_ban,BLENDING);
-	// if (ip!=Pses.begin()){
-	//     I.PutImagen(posi_ini-i_ban_inicio.num_filas()/2,posj_ini-i_ban_inicio.num_cols()/2,i_ban_inicio,BLENDING);
-	// }
-	// i_ban_inicio=i_ban;
-	// posi_ini=y;
-	// posj_ini=x;
-	// it_before = it;
-  //  }
-  //
-  // string nsal=a+".ppm";
-  // I.EscribirImagen(nsal.c_str());
+  Almacen_rutas Ar;
+  f.close();
+   f.open (argv[4]);
+  f>>Ar;
+  cout<<"Las rutas: "<<endl<<Ar;
+  cout<<"Dime el codigo de una ruta"<<endl;
+  string a;
+  cin>>a;
+  Ruta R=Ar.GetRuta(a);
+
+  Ruta::iterator it,it_before;
+  Paises::iterator ip_before =Pses.end();
+  Paises::iterator ip=Pses.end();
+  Imagen i_ban_inicio;
+  int posi_ini,posj_ini;
+  for (it=R.begin(); it!=R.end();++it){
+      Punto pto = (*it);
+
+      ip_before = ip;
+      ip=Pses.find(pto);
+
+      string name = (*ip).GetBandera();
+      string n_com = argv[3]+name;
+
+      Imagen i_ban;
+      i_ban.LeerImagen(n_com.c_str(),"");
+
+	cout<<(*ip).GetPais()<<" ";
+	int x =  (int) ((I.num_cols()/360.0) * (180 + pto.GetLongitud()));
+	int y =  (int) ((I.num_filas()/180.0) * (90 - pto.GetLatitud()));
+	if (ip_before!=Pses.end() ){
+
+	  int x_old =(int) ((I.num_cols()/360.0) * (180 + (*it_before).GetLongitud()));
+	  int y_old =  (int) ((I.num_filas()/180.0) * (90 -(*it_before).GetLatitud()));
+
+	  Pintar(y_old-avion.num_filas()/2 ,y-avion.num_filas()/2, x_old-avion.num_cols()/2,x-avion.num_cols()/2,I,avion,50,50);
+	}
+
+	I.PutImagen(y-i_ban.num_filas()/2,x-i_ban.num_cols()/2,i_ban,BLENDING);
+	if (ip!=Pses.begin()){
+	    I.PutImagen(posi_ini-i_ban_inicio.num_filas()/2,posj_ini-i_ban_inicio.num_cols()/2,i_ban_inicio,BLENDING);
+	}
+	i_ban_inicio=i_ban;
+	posi_ini=y;
+	posj_ini=x;
+	it_before = it;
+   }
+
+  string nsal=a+".ppm";
+  I.EscribirImagen(nsal.c_str());
 
 }

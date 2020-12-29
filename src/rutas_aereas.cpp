@@ -1,8 +1,11 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 #include <iomanip>
 #include "../include/punto.h"
 #include "../include/ruta.h"
+#include "../include/paises.h"
+#include "../include/imagen.h"
 #include "../include/almacen_rutas.h"
 using namespace std;
 
@@ -18,5 +21,10 @@ int main(int argc, char * argv[]){
 
       return 0;
   }
+  ifstream f (argv[1]);
   Almacen_rutas Ar;
+  f.close();
+   f.open (argv[4]);
+  f>>Ar;
+  cout<<"Las rutas: "<<endl<<Ar;
 }

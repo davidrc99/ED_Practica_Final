@@ -17,8 +17,7 @@ public:
   void Borrar(const string &clave);
   Almacen_rutas & operator=(const Almacen_rutas &Ar);
   friend ostream & operator<<(ostream & os, const Almacen_rutas &Ar){
-    map<string,Ruta>::iterator it;
-    os << "#[CODIGO] [RUTA]" << endl;
+    map<string,Ruta>::const_iterator it;
     for ( it = Ar.rutas.begin(); it != Ar.rutas.end(); it++) {
       os << it->first << " " << it->second;
       os << endl;
@@ -26,17 +25,26 @@ public:
 
     return os;
   }
-  friend istream & operator>>(istream & is, const Almacen_rutas &Ar){
-    Almacen_rutas Ar_aux;
+  friend istream & operator>>(istream & is, Almacen_rutas &Ar){
+    int num_rutas;
+    if(!Ar.rutas.empty()){
+      Ar.rutas.clear();
+    }
     if (is.peek()=='#'){
       string a;
       getline(is,a);
     }
-    Ruta R;
-    while(is>>R){
-      Ar_aux.Insertar(R.GetCodigo(),R);
+    if (is.peek()=='/'){
+      string num_rutas_str;
+      is.ignore();
+      getline(is,num_rutas_str);
+      num_rutas = atoi(num_rutas_str.c_str());
     }
-    Ar =Ar_aux;
+    Ruta R;
+    for (int i = 0; i < num_rutas; i++){
+        is >> R;
+        Ar.Insertar(R.GetCodigo(),R);
+    }
     return is;
   }
 
@@ -46,25 +54,28 @@ public:
     map<string,Ruta>::iterator r;
   public:
     iterator(){}
-    iterator & operator ++(){
+    iterator & operator++(){
       ++r;
       return * this;
     }
-    iterator & operator --(){
+    iterator & operator--(){
       --r;
       return * this;
     }
-    bool operator ==(const iterator  & it){
+
+    iterator & operator=(const iterator & it){
+      r=it.r;
+      return *this;
+    }
+
+    bool operator==(const iterator  & it){
       return it.r ==r;
     }
 
-    bool operator !=(const iterator  & it){
+    bool operator!=(const iterator  & it){
       return it.r !=r;
     }
 
-     const Almacen_rutas & operator*()const{
-       return *r;
-    }
     friend class Almacen_rutas;
     friend class const_iterator;
   };
@@ -81,19 +92,14 @@ public:
     return it;
   }
 
-  iterator find(const Ruta &r){
+  iterator find( Ruta &ruta_param){
       iterator it;
       map<string,Ruta>::iterator i;
-      for (i=rutas.begin(); i!=rutas.end() && !((*i)==r);++i);
-      it.r=i;
-      return it;
-  }
-
-  iterator find(const Punto &r){
-      iterator it;
-      map<string,Ruta>::iterator i;
-      for (i=rutas.begin(); i!=rutas.end() && !((*i)==r);++i);
-      it.r=i;
+      for (i=rutas.begin(); i!=rutas.end();++i){
+        if(((*i).first==ruta_param.GetCodigo())){
+          it.r=i;
+        }
+      }
       return it;
   }
 
@@ -127,9 +133,6 @@ public:
       return it.r !=r;
     }
 
-     const Almacen_rutas & operator*()const{
-       return *r;
-    }
     friend class Almacen_rutas;
     friend class iterator;
   };
