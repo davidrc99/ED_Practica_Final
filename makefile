@@ -42,7 +42,7 @@ $(OBJ)/punto.o: $(SRC)/punto.cpp $(INC)/punto.h
 	$(compilador) $(FLAGS) $< -o $@
 
 clean:
-	rm -f $(OBJ)/* $(BIN)/*
+	rm -f $(OBJ)/* $(BIN)/* $(LIB)/*
 
 rebuild:
 	clean $(BIN)/*
