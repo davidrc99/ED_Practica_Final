@@ -101,16 +101,16 @@ void Pintar( int f1,int f2,int c1,int c2,Imagen &I, const Imagen &avion,int mind
 	  double angulo = atan2((f2-f1),(c2-c1));
 	  Imagen Irota=Rota(avion,angulo);
 
-	  I.PutImagen(fila,col,Irota);
+	  I.PutImagen(fila,col,Irota,OPACO);
 
 	   angulo = atan2((f2-fila),(c2-col));
 	  Irota=Rota(avion,angulo);
 
-	  I.PutImagen(f2,c2,Irota);
+	  I.PutImagen(f2,c2,Irota,OPACO);
 	  angulo = atan2((fila-f1),(col-c1));
 	  Irota=Rota(avion,angulo);
 
-	  I.PutImagen(f1,c1,Irota);
+	  I.PutImagen(f1,c1,Irota,OPACO);
 
 
       }
@@ -179,9 +179,9 @@ int main(int argc, char * argv[]){
 	  Pintar(y_old-avion.num_filas()/2 ,y-avion.num_filas()/2, x_old-avion.num_cols()/2,x-avion.num_cols()/2,I,avion,50,50);
 	}
 
-	I.PutImagen(y-i_ban.num_filas()/2,x-i_ban.num_cols()/2,i_ban,BLENDING);
+	I.PutImagen(y-i_ban.num_filas()/2,x-i_ban.num_cols()/2,i_ban);
 	if (ip!=Pses.begin()){
-	    I.PutImagen(posi_ini-i_ban_inicio.num_filas()/2,posj_ini-i_ban_inicio.num_cols()/2,i_ban_inicio,BLENDING);
+	    I.PutImagen(posi_ini-i_ban_inicio.num_filas()/2,posj_ini-i_ban_inicio.num_cols()/2,i_ban_inicio);
 	}
 	i_ban_inicio=i_ban;
 	posi_ini=y;

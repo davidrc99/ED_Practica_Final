@@ -101,16 +101,16 @@ void Pintar( int f1,int f2,int c1,int c2,Imagen &I, const Imagen &avion,int mind
 	  double angulo = atan2((f2-f1),(c2-c1));
 	  Imagen Irota=Rota(avion,angulo);
 
-	  I.PutImagen(fila,col,Irota);
+	  I.PutImagen(fila,col,Irota,OPACO);
 
 	   angulo = atan2((f2-fila),(c2-col));
 	  Irota=Rota(avion,angulo);
 
-	  I.PutImagen(f2,c2,Irota);
+	  I.PutImagen(f2,c2,Irota,OPACO);
 	  angulo = atan2((fila-f1),(col-c1));
 	  Irota=Rota(avion,angulo);
 
-	  I.PutImagen(f1,c1,Irota);
+	  I.PutImagen(f1,c1,Irota,OPACO);
 
 
       }

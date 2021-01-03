@@ -161,9 +161,9 @@ void Imagen::PutImagen(int posi,int posj, const Imagen &I,Tipo_Pegado tippegado)
 	  if (tippegado==OPACO)
 	    data[i+posi][j+posj]=I.data[i][j];
 	  else{
-	    data[i+posi][j+posj].r=(data[i+posi][j+posj].r+I.data[i][j].r)/2;
-	    data[i+posi][j+posj].g=(data[i+posi][j+posj].r+I.data[i][j].g)/2;
-	    data[i+posi][j+posj].b=(data[i+posi][j+posj].r+I.data[i][j].b)/2;
+	    data[i+posi][j+posj].r=(0.6*data[i+posi][j+posj].r+0.4*I.data[i][j].r);
+	    data[i+posi][j+posj].g=(0.6*data[i+posi][j+posj].g+0.4*I.data[i][j].g);
+	    data[i+posi][j+posj].b=(0.6*data[i+posi][j+posj].b+0.4*I.data[i][j].b);
 	  }
 
 	}
