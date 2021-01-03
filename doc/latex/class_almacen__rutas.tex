@@ -1,0 +1,215 @@
+\hypertarget{class_almacen__rutas}{}\doxysection{Referencia de la Clase Almacen\+\_\+rutas}
+\label{class_almacen__rutas}\index{Almacen\_rutas@{Almacen\_rutas}}
+
+
+Clase Almance de Rutas, la cual está formada por un mapa de rutas y sus respectivos códigos.  
+
+
+
+
+{\ttfamily \#include $<$almacen\+\_\+rutas.\+h$>$}
+
+\doxysubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_almacen__rutas_1_1const__iterator}{const\+\_\+iterator}}
+\item 
+class \mbox{\hyperlink{class_almacen__rutas_1_1iterator}{iterator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_almacen__rutas_aaab6d77adf34f39a5f6cb5dee3174988}{Almacen\+\_\+rutas}} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto del Almacén de Rutas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ruta}{Ruta}} \mbox{\hyperlink{class_almacen__rutas_a0bb0793035e05aa803f2f7eb8659982f}{Get\+Ruta}} (string codigo)
+\begin{DoxyCompactList}\small\item\em Consulta una ruta específica dado su código identificador. \end{DoxyCompactList}\item 
+list$<$ \mbox{\hyperlink{class_ruta}{Ruta}} $>$ \mbox{\hyperlink{class_almacen__rutas_afa2b22b1b33138427fa123255f1ec734}{Get\+Rutas}} (\mbox{\hyperlink{class_punto}{Punto}} punto)
+\begin{DoxyCompactList}\small\item\em Consulta las rutas del almacén que pasan por un punto en específico. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_almacen__rutas_a243f762054718589e7f107ab2e7bf076}{Insertar}} (const \mbox{\hyperlink{class_ruta}{Ruta}} \&ruta)
+\begin{DoxyCompactList}\small\item\em Inserta una ruta en el almacén de rutas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_almacen__rutas_a7ed91f0a13854a18da6ad1871d811419}{Borrar}} (const string \&clave)
+\begin{DoxyCompactList}\small\item\em Borra una ruta en el almacén de rutas dado su código de identificación. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_almacen__rutas}{Almacen\+\_\+rutas}} \& \mbox{\hyperlink{class_almacen__rutas_aee5e5e43401191d3475b507ffea6e47a}{operator=}} (const \mbox{\hyperlink{class_almacen__rutas}{Almacen\+\_\+rutas}} \&Ar)
+\begin{DoxyCompactList}\small\item\em Asignar un Almacén de Rutas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_almacen__rutas_aaad73ca67fb32ae9fcd1c6a631695b0a}{Quita\+Separadores}} (istream \&is)
+\begin{DoxyCompactList}\small\item\em Quita separadores. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_almacen__rutas_aee0789d2ba709bfe94ea4bea056aabb1}\label{class_almacen__rutas_aee0789d2ba709bfe94ea4bea056aabb1}} 
+\mbox{\hyperlink{class_almacen__rutas_1_1iterator}{iterator}} {\bfseries begin} ()
+\item 
+\mbox{\Hypertarget{class_almacen__rutas_aa469e61415a6cf181219a41834e889ae}\label{class_almacen__rutas_aa469e61415a6cf181219a41834e889ae}} 
+\mbox{\hyperlink{class_almacen__rutas_1_1iterator}{iterator}} {\bfseries end} ()
+\item 
+\mbox{\Hypertarget{class_almacen__rutas_a286074ac23d6e4c94c17d4a70a1c7fdf}\label{class_almacen__rutas_a286074ac23d6e4c94c17d4a70a1c7fdf}} 
+\mbox{\hyperlink{class_almacen__rutas_1_1iterator}{iterator}} {\bfseries find} (\mbox{\hyperlink{class_ruta}{Ruta}} \&ruta\+\_\+param)
+\item 
+\mbox{\Hypertarget{class_almacen__rutas_a5f4c0cc924f6318a54735ddffaab3d38}\label{class_almacen__rutas_a5f4c0cc924f6318a54735ddffaab3d38}} 
+\mbox{\hyperlink{class_almacen__rutas_1_1const__iterator}{const\+\_\+iterator}} {\bfseries begin} () const
+\item 
+\mbox{\Hypertarget{class_almacen__rutas_a640c129f3e30ddb65f50dd7ccb9b92c6}\label{class_almacen__rutas_a640c129f3e30ddb65f50dd7ccb9b92c6}} 
+\mbox{\hyperlink{class_almacen__rutas_1_1const__iterator}{const\+\_\+iterator}} {\bfseries end} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{class_almacen__rutas_ab8ad46a25cd85212481755b20ab402f0}{operator$<$$<$}} (ostream \&os, const \mbox{\hyperlink{class_almacen__rutas}{Almacen\+\_\+rutas}} \&Ar)
+\begin{DoxyCompactList}\small\item\em Operador que imprime el almacén de rutas por pantalla. \end{DoxyCompactList}\item 
+istream \& \mbox{\hyperlink{class_almacen__rutas_a736d9aa3702bc8de4e75d38c08d94abc}{operator$>$$>$}} (istream \&is, \mbox{\hyperlink{class_almacen__rutas}{Almacen\+\_\+rutas}} \&Ar)
+\begin{DoxyCompactList}\small\item\em Operador que lee un Almacen de Rutas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase Almance de Rutas, la cual está formada por un mapa de rutas y sus respectivos códigos. 
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_almacen__rutas_aaab6d77adf34f39a5f6cb5dee3174988}\label{class_almacen__rutas_aaab6d77adf34f39a5f6cb5dee3174988}} 
+\index{Almacen\_rutas@{Almacen\_rutas}!Almacen\_rutas@{Almacen\_rutas}}
+\index{Almacen\_rutas@{Almacen\_rutas}!Almacen\_rutas@{Almacen\_rutas}}
+\doxysubsubsection{\texorpdfstring{Almacen\_rutas()}{Almacen\_rutas()}}
+{\footnotesize\ttfamily Almacen\+\_\+rutas\+::\+Almacen\+\_\+rutas (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor por defecto del Almacén de Rutas. 
+
+Mapa de las rutas del Almacén 
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_almacen__rutas_a7ed91f0a13854a18da6ad1871d811419}\label{class_almacen__rutas_a7ed91f0a13854a18da6ad1871d811419}} 
+\index{Almacen\_rutas@{Almacen\_rutas}!Borrar@{Borrar}}
+\index{Borrar@{Borrar}!Almacen\_rutas@{Almacen\_rutas}}
+\doxysubsubsection{\texorpdfstring{Borrar()}{Borrar()}}
+{\footnotesize\ttfamily void Almacen\+\_\+rutas\+::\+Borrar (\begin{DoxyParamCaption}\item[{const string \&}]{clave }\end{DoxyParamCaption})}
+
+
+
+Borra una ruta en el almacén de rutas dado su código de identificación. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em clave} & Identificador de la ruta \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_almacen__rutas_a0bb0793035e05aa803f2f7eb8659982f}\label{class_almacen__rutas_a0bb0793035e05aa803f2f7eb8659982f}} 
+\index{Almacen\_rutas@{Almacen\_rutas}!GetRuta@{GetRuta}}
+\index{GetRuta@{GetRuta}!Almacen\_rutas@{Almacen\_rutas}}
+\doxysubsubsection{\texorpdfstring{GetRuta()}{GetRuta()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ruta}{Ruta}} Almacen\+\_\+rutas\+::\+Get\+Ruta (\begin{DoxyParamCaption}\item[{string}]{codigo }\end{DoxyParamCaption})}
+
+
+
+Consulta una ruta específica dado su código identificador. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em codigo} & identificador de la ruta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+\mbox{\hyperlink{class_ruta}{Ruta}} deseada en caso de que exista 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_almacen__rutas_afa2b22b1b33138427fa123255f1ec734}\label{class_almacen__rutas_afa2b22b1b33138427fa123255f1ec734}} 
+\index{Almacen\_rutas@{Almacen\_rutas}!GetRutas@{GetRutas}}
+\index{GetRutas@{GetRutas}!Almacen\_rutas@{Almacen\_rutas}}
+\doxysubsubsection{\texorpdfstring{GetRutas()}{GetRutas()}}
+{\footnotesize\ttfamily list$<$ \mbox{\hyperlink{class_ruta}{Ruta}} $>$ Almacen\+\_\+rutas\+::\+Get\+Rutas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_punto}{Punto}}}]{punto }\end{DoxyParamCaption})}
+
+
+
+Consulta las rutas del almacén que pasan por un punto en específico. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em punto} & \mbox{\hyperlink{class_punto}{Punto}} el cual se desea ver que rutas pasan por él \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+lista de rutas que pasan por ese punto 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_almacen__rutas_a243f762054718589e7f107ab2e7bf076}\label{class_almacen__rutas_a243f762054718589e7f107ab2e7bf076}} 
+\index{Almacen\_rutas@{Almacen\_rutas}!Insertar@{Insertar}}
+\index{Insertar@{Insertar}!Almacen\_rutas@{Almacen\_rutas}}
+\doxysubsubsection{\texorpdfstring{Insertar()}{Insertar()}}
+{\footnotesize\ttfamily void Almacen\+\_\+rutas\+::\+Insertar (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_ruta}{Ruta}} \&}]{ruta }\end{DoxyParamCaption})}
+
+
+
+Inserta una ruta en el almacén de rutas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em ruta} & \mbox{\hyperlink{class_ruta}{Ruta}} la cual se va a insertar en el almacén \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_almacen__rutas_aee5e5e43401191d3475b507ffea6e47a}\label{class_almacen__rutas_aee5e5e43401191d3475b507ffea6e47a}} 
+\index{Almacen\_rutas@{Almacen\_rutas}!operator=@{operator=}}
+\index{operator=@{operator=}!Almacen\_rutas@{Almacen\_rutas}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_almacen__rutas}{Almacen\+\_\+rutas}} \& Almacen\+\_\+rutas\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_almacen__rutas}{Almacen\+\_\+rutas}} \&}]{Ar }\end{DoxyParamCaption})}
+
+
+
+Asignar un Almacén de Rutas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em Ar} & Almacén de rutas de la que se van a copiar sus atributos \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_almacen__rutas_aaad73ca67fb32ae9fcd1c6a631695b0a}\label{class_almacen__rutas_aaad73ca67fb32ae9fcd1c6a631695b0a}} 
+\index{Almacen\_rutas@{Almacen\_rutas}!QuitaSeparadores@{QuitaSeparadores}}
+\index{QuitaSeparadores@{QuitaSeparadores}!Almacen\_rutas@{Almacen\_rutas}}
+\doxysubsubsection{\texorpdfstring{QuitaSeparadores()}{QuitaSeparadores()}}
+{\footnotesize\ttfamily void Almacen\+\_\+rutas\+::\+Quita\+Separadores (\begin{DoxyParamCaption}\item[{istream \&}]{is }\end{DoxyParamCaption})}
+
+
+
+Quita separadores. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em is} & los datos de entrada que recibe \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de las funciones relacionadas y clases amigas}
+\mbox{\Hypertarget{class_almacen__rutas_ab8ad46a25cd85212481755b20ab402f0}\label{class_almacen__rutas_ab8ad46a25cd85212481755b20ab402f0}} 
+\index{Almacen\_rutas@{Almacen\_rutas}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Almacen\_rutas@{Almacen\_rutas}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_almacen__rutas}{Almacen\+\_\+rutas}} \&}]{Ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operador que imprime el almacén de rutas por pantalla. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em os} & los datos de salida que imprime \\
+\hline
+{\em Ar} & Almacen de rutas a mostrar por pantalla \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_almacen__rutas_a736d9aa3702bc8de4e75d38c08d94abc}\label{class_almacen__rutas_a736d9aa3702bc8de4e75d38c08d94abc}} 
+\index{Almacen\_rutas@{Almacen\_rutas}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Almacen\_rutas@{Almacen\_rutas}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{is,  }\item[{\mbox{\hyperlink{class_almacen__rutas}{Almacen\+\_\+rutas}} \&}]{Ar }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operador que lee un Almacen de Rutas. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em is} & los datos de entrada \\
+\hline
+{\em Ar} & Almacen de ruta para guardar los parámetros que se lean \\
+\hline
+\end{DoxyParams}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{almacen__rutas_8h}{almacen\+\_\+rutas.\+h}}\item 
+src/\mbox{\hyperlink{almacen__rutas_8cpp}{almacen\+\_\+rutas.\+cpp}}\end{DoxyCompactItemize}

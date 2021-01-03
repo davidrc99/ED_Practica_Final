@@ -1,3 +1,9 @@
+/**
+  * @file paises.h
+  * @brief Fichero cabecera para el TDA paises
+  * @author Blanca Abril González y David Román Castellano
+  */
+
 #ifndef __PAISES__
 #define __PAISES__
 #include "../include/pais.h"
@@ -5,12 +11,36 @@
 #include <set>
 #include <iostream>
 using namespace std;
+
+/**
+  * @class Paises
+  * @brief Clase Paises, la cual está formada por un conjunto de
+  * objetos de clase Pais
+  */
+
 class Paises{
   private:
-    set<Pais> datos;
+    set<Pais> datos;  /**Conjunto de paises*/
   public:
+
+    /**
+      * @brief Constructor por defecto de Paises
+    */
+
       Paises(){}
+
+      /**
+        * @brief Inserta un país en el conjunto de países
+        * @param P Pais el cual se va a insertar en el conjunto
+      */
+
       void Insertar(const Pais &P);
+
+      /**
+        * @brief Borra un país del conjunto de países
+        * @param P Pais el cual se va a borrar del conjunto
+      */
+
       void Borrar(const Pais &P);
       class const_iterator;
 
@@ -44,6 +74,7 @@ class Paises{
 	    friend class Paises;
 	    friend class const_iterator;
 	};
+
 
 	class const_iterator{
 	private:
@@ -114,9 +145,15 @@ class Paises{
 	    it.p=i;
 	    return it;
 	}
+
+  /**
+    * @brief Operador que lee un conjunto de paises
+    * @param is los datos de entrada
+    * @param R Conjunto de paises el cual se va a guardar los parámetros que se lean
+  */
+
 	friend istream & operator>>(istream & is, Paises & R){
     Paises rlocal;
-    //leemos el comentario
     if (is.peek()=='#'){
       string a;
       getline(is,a);
@@ -129,6 +166,13 @@ class Paises{
     R=rlocal;
     return is;
 	}
+
+  /**
+  * @brief Operador que imprime el conjunto de paises por pantalla
+    * @param os los datos de salida que imprime
+    * @param R Conjunto de Paises a mostrar por pantalla
+  */
+
 	friend ostream & operator<<(ostream & os, const Paises &R){
 
     Paises::const_iterator it;

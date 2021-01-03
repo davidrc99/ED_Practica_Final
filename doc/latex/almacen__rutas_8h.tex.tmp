@@ -1,0 +1,32 @@
+\hypertarget{almacen__rutas_8h}{}\doxysection{Referencia del Archivo include/almacen\+\_\+rutas.h}
+\label{almacen__rutas_8h}\index{include/almacen\_rutas.h@{include/almacen\_rutas.h}}
+
+
+Fichero cabecera para el T\+DA Almacen Rutas.  
+
+
+{\ttfamily \#include \char`\"{}../include/punto.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/ruta.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Dependencia gráfica adjunta para almacen\+\_\+rutas.\+h\+:
+% FIG 0
+Gráfico de los archivos que directa o indirectamente incluyen a este archivo\+:
+% FIG 1
+\doxysubsection*{Clases}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_almacen__rutas}{Almacen\+\_\+rutas}}
+\begin{DoxyCompactList}\small\item\em Clase Almance de Rutas, la cual está formada por un mapa de rutas y sus respectivos códigos. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{class_almacen__rutas_1_1iterator}{Almacen\+\_\+rutas\+::iterator}}
+\item 
+class \mbox{\hyperlink{class_almacen__rutas_1_1const__iterator}{Almacen\+\_\+rutas\+::const\+\_\+iterator}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Fichero cabecera para el T\+DA Almacen Rutas. 
+
+\begin{DoxyAuthor}{Autor}
+Blanca Abril González y David Román Castellano 
+\end{DoxyAuthor}

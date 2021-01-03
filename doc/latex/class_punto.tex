@@ -1,0 +1,255 @@
+\hypertarget{class_punto}{}\doxysection{Referencia de la Clase Punto}
+\label{class_punto}\index{Punto@{Punto}}
+
+
+Clase \mbox{\hyperlink{class_punto}{Punto}} la cual esta formada por la latitud, la longitud y una breve descripcion.  
+
+
+
+
+{\ttfamily \#include $<$punto.\+h$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_punto_a4b8b70b933ff13493ee5ddb3c8532c10}\label{class_punto_a4b8b70b933ff13493ee5ddb3c8532c10}} 
+\mbox{\hyperlink{class_punto_a4b8b70b933ff13493ee5ddb3c8532c10}{Punto}} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto de \mbox{\hyperlink{class_punto}{Punto}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_punto_adf69cd91ad9373486332198eb775c09d}{Punto}} (double lat\+\_\+n, double lng\+\_\+n, string des\+\_\+n)
+\begin{DoxyCompactList}\small\item\em Constructor por parametros de \mbox{\hyperlink{class_punto}{Punto}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_punto_ac3e0a5cf97f4025994619e4c987bd0ee}{Punto}} (const \mbox{\hyperlink{class_punto}{Punto}} \&p)
+\begin{DoxyCompactList}\small\item\em Constructor de copia de \mbox{\hyperlink{class_punto}{Punto}}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_punto_ac8debe70768da11c75571aad69012a17}{Get\+Longitud}} () const
+\begin{DoxyCompactList}\small\item\em Consulta la longitud de un punto. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_punto_a5ba00c282dafe9222de6ca6877d4607e}\label{class_punto_a5ba00c282dafe9222de6ca6877d4607e}} 
+double \mbox{\hyperlink{class_punto_a5ba00c282dafe9222de6ca6877d4607e}{Get\+Latitud}} () const
+\begin{DoxyCompactList}\small\item\em Constructor por defecto de \mbox{\hyperlink{class_punto}{Punto}}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_punto_ac19bb487990bf8862e5a9a7d63e090fe}{Get\+Descripcion}} ()
+\begin{DoxyCompactList}\small\item\em Consulta la descripcion de un punto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_punto_a57a9b046600d10eb474d759ad111715d}{Set\+Longitud}} (double valor)
+\begin{DoxyCompactList}\small\item\em Establece la longitud de un punto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_punto_a38b6d80a5eb7319f0776ecb9072063f8}{Set\+Latitud}} (double valor)
+\begin{DoxyCompactList}\small\item\em Establece la latitud de un punto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_punto_af8995fd3aa89233d0ef607e43101a3ac}{Set\+Descripcion}} (string valor)
+\begin{DoxyCompactList}\small\item\em Establece la descripcion de un punto. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_punto}{Punto}} \& \mbox{\hyperlink{class_punto_a5caf2e9645594130090d186ff014fb57}{operator=}} (const \mbox{\hyperlink{class_punto}{Punto}} \&p)
+\begin{DoxyCompactList}\small\item\em Asignar un punto. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_punto_a28092d53569dd766695ba90c71763df2}{operator==}} (const \mbox{\hyperlink{class_punto}{Punto}} \&p) const
+\begin{DoxyCompactList}\small\item\em Comprueba si un punto es igual a otro. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_punto_aa09b48f0211ac3bcd59bc01dd4e5fa71}{operator!=}} (const \mbox{\hyperlink{class_punto}{Punto}} \&p) const
+\begin{DoxyCompactList}\small\item\em Comprueba si un punto es diferente a otro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \mbox{\hyperlink{class_punto_a3f05fcfa9cd01b94bdcff7e6c3da90b5}{operator$<$$<$}} (ostream \&os, const \mbox{\hyperlink{class_punto}{Punto}} \&P)
+\begin{DoxyCompactList}\small\item\em Operador que imprime un punto por pantalla. \end{DoxyCompactList}\item 
+istream \& \mbox{\hyperlink{class_punto_a579abdf5a20ea89e04074cd2cfea02cd}{operator$>$$>$}} (istream \&is, \mbox{\hyperlink{class_punto}{Punto}} \&P)
+\begin{DoxyCompactList}\small\item\em Operador que almacena un punto. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase \mbox{\hyperlink{class_punto}{Punto}} la cual esta formada por la latitud, la longitud y una breve descripcion. 
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_punto_adf69cd91ad9373486332198eb775c09d}\label{class_punto_adf69cd91ad9373486332198eb775c09d}} 
+\index{Punto@{Punto}!Punto@{Punto}}
+\index{Punto@{Punto}!Punto@{Punto}}
+\doxysubsubsection{\texorpdfstring{Punto()}{Punto()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Punto\+::\+Punto (\begin{DoxyParamCaption}\item[{double}]{lat\+\_\+n,  }\item[{double}]{lng\+\_\+n,  }\item[{string}]{des\+\_\+n }\end{DoxyParamCaption})}
+
+
+
+Constructor por parametros de \mbox{\hyperlink{class_punto}{Punto}}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em lat\+\_\+n} & latitud \\
+\hline
+{\em lng\+\_\+n} & longitud \\
+\hline
+{\em des\+\_\+n} & breve descripcion \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_punto_ac3e0a5cf97f4025994619e4c987bd0ee}\label{class_punto_ac3e0a5cf97f4025994619e4c987bd0ee}} 
+\index{Punto@{Punto}!Punto@{Punto}}
+\index{Punto@{Punto}!Punto@{Punto}}
+\doxysubsubsection{\texorpdfstring{Punto()}{Punto()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Punto\+::\+Punto (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_punto}{Punto}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Constructor de copia de \mbox{\hyperlink{class_punto}{Punto}}. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em p} & punto del que se van a copiar sus atributos \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_punto_ac19bb487990bf8862e5a9a7d63e090fe}\label{class_punto_ac19bb487990bf8862e5a9a7d63e090fe}} 
+\index{Punto@{Punto}!GetDescripcion@{GetDescripcion}}
+\index{GetDescripcion@{GetDescripcion}!Punto@{Punto}}
+\doxysubsubsection{\texorpdfstring{GetDescripcion()}{GetDescripcion()}}
+{\footnotesize\ttfamily string Punto\+::\+Get\+Descripcion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Consulta la descripcion de un punto. 
+
+\begin{DoxyReturn}{Devuelve}
+Devuelve la descripcion 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_punto_ac8debe70768da11c75571aad69012a17}\label{class_punto_ac8debe70768da11c75571aad69012a17}} 
+\index{Punto@{Punto}!GetLongitud@{GetLongitud}}
+\index{GetLongitud@{GetLongitud}!Punto@{Punto}}
+\doxysubsubsection{\texorpdfstring{GetLongitud()}{GetLongitud()}}
+{\footnotesize\ttfamily double Punto\+::\+Get\+Longitud (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Consulta la longitud de un punto. 
+
+\begin{DoxyReturn}{Devuelve}
+Devuelve la longitud 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_punto_aa09b48f0211ac3bcd59bc01dd4e5fa71}\label{class_punto_aa09b48f0211ac3bcd59bc01dd4e5fa71}} 
+\index{Punto@{Punto}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Punto@{Punto}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Punto\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_punto}{Punto}} \&}]{p }\end{DoxyParamCaption}) const}
+
+
+
+Comprueba si un punto es diferente a otro. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em p} & punto a comparar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+devuelve true si los puntos son diferentes y false en caso contrario 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_punto_a5caf2e9645594130090d186ff014fb57}\label{class_punto_a5caf2e9645594130090d186ff014fb57}} 
+\index{Punto@{Punto}!operator=@{operator=}}
+\index{operator=@{operator=}!Punto@{Punto}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_punto}{Punto}} \& Punto\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_punto}{Punto}} \&}]{p }\end{DoxyParamCaption})}
+
+
+
+Asignar un punto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em p} & punto del que se van a copiar sus atributos \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_punto_a28092d53569dd766695ba90c71763df2}\label{class_punto_a28092d53569dd766695ba90c71763df2}} 
+\index{Punto@{Punto}!operator==@{operator==}}
+\index{operator==@{operator==}!Punto@{Punto}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Punto\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_punto}{Punto}} \&}]{p }\end{DoxyParamCaption}) const}
+
+
+
+Comprueba si un punto es igual a otro. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em p} & punto a comparar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+devuelve true si los puntos son iguales y false en caso contrario 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_punto_af8995fd3aa89233d0ef607e43101a3ac}\label{class_punto_af8995fd3aa89233d0ef607e43101a3ac}} 
+\index{Punto@{Punto}!SetDescripcion@{SetDescripcion}}
+\index{SetDescripcion@{SetDescripcion}!Punto@{Punto}}
+\doxysubsubsection{\texorpdfstring{SetDescripcion()}{SetDescripcion()}}
+{\footnotesize\ttfamily void Punto\+::\+Set\+Descripcion (\begin{DoxyParamCaption}\item[{string}]{valor }\end{DoxyParamCaption})}
+
+
+
+Establece la descripcion de un punto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em valor} & la descripcion a establecer en el punto \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_punto_a38b6d80a5eb7319f0776ecb9072063f8}\label{class_punto_a38b6d80a5eb7319f0776ecb9072063f8}} 
+\index{Punto@{Punto}!SetLatitud@{SetLatitud}}
+\index{SetLatitud@{SetLatitud}!Punto@{Punto}}
+\doxysubsubsection{\texorpdfstring{SetLatitud()}{SetLatitud()}}
+{\footnotesize\ttfamily void Punto\+::\+Set\+Latitud (\begin{DoxyParamCaption}\item[{double}]{valor }\end{DoxyParamCaption})}
+
+
+
+Establece la latitud de un punto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em valor} & la longitud a establecer en el punto \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_punto_a57a9b046600d10eb474d759ad111715d}\label{class_punto_a57a9b046600d10eb474d759ad111715d}} 
+\index{Punto@{Punto}!SetLongitud@{SetLongitud}}
+\index{SetLongitud@{SetLongitud}!Punto@{Punto}}
+\doxysubsubsection{\texorpdfstring{SetLongitud()}{SetLongitud()}}
+{\footnotesize\ttfamily void Punto\+::\+Set\+Longitud (\begin{DoxyParamCaption}\item[{double}]{valor }\end{DoxyParamCaption})}
+
+
+
+Establece la longitud de un punto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em valor} & la longitud a establecer en el punto \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentación de las funciones relacionadas y clases amigas}
+\mbox{\Hypertarget{class_punto_a3f05fcfa9cd01b94bdcff7e6c3da90b5}\label{class_punto_a3f05fcfa9cd01b94bdcff7e6c3da90b5}} 
+\index{Punto@{Punto}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Punto@{Punto}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_punto}{Punto}} \&}]{P }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operador que imprime un punto por pantalla. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em os} & los datos de salida que imprime \\
+\hline
+{\em p} & punto a mostrar por pantalla \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_punto_a579abdf5a20ea89e04074cd2cfea02cd}\label{class_punto_a579abdf5a20ea89e04074cd2cfea02cd}} 
+\index{Punto@{Punto}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Punto@{Punto}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{is,  }\item[{\mbox{\hyperlink{class_punto}{Punto}} \&}]{P }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operador que almacena un punto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em is} & los datos de entrada \\
+\hline
+{\em p} & punto para almacenar sus parametros \\
+\hline
+\end{DoxyParams}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{punto_8h}{punto.\+h}}\item 
+src/\mbox{\hyperlink{punto_8cpp}{punto.\+cpp}}\end{DoxyCompactItemize}

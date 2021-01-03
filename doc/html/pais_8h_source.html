@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PrácticaFinal-RutasAéreas: Fichero Fuente include/pais.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PrácticaFinal-RutasAéreas
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">pais.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="pais_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef __PAIS__</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#define __PAIS__</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="punto_8h.html">punto.h</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_pais.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_pais.html">Pais</a>{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_punto.html">Punto</a> p; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">string</span> pais; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">string</span> bandera; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_pais.html#a16af2b45eb9d07e7292a58556edc9371">   28</a></span>&#160;    <a class="code" href="class_pais.html#a16af2b45eb9d07e7292a58556edc9371">Pais</a>(){}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_punto.html">Punto</a> GetPunto()<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">string</span> GetPais()<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordtype">string</span> GetBandera()<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">bool</span> operator&lt;(<span class="keyword">const</span> <a class="code" href="class_pais.html">Pais</a> &amp;P)<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="class_pais.html">Pais</a> &amp;P)<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;     <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="class_punto.html">Punto</a> &amp;P)<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_pais.html#aacd6663db9fb049ff7041c93f4bdbf6a">   81</a></span>&#160;    <span class="keyword">friend</span> istream &amp; <a class="code" href="class_pais.html#aacd6663db9fb049ff7041c93f4bdbf6a">operator&gt;&gt;</a>(istream &amp; is, <a class="code" href="class_pais.html">Pais</a> &amp; P){</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      <span class="keywordtype">double</span> lat,lng;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      is&gt;&gt;lat&gt;&gt;lng&gt;&gt;P.pais&gt;&gt;P.bandera;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      P.p=<a class="code" href="class_punto.html">Punto</a>(lat,lng,<span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <span class="keywordflow">return</span> is;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="class_pais.html#a6d1c962b239638bd10f4a58a5aeaa6d5">   95</a></span>&#160;    <span class="keyword">friend</span> ostream &amp; <a class="code" href="class_pais.html#a6d1c962b239638bd10f4a58a5aeaa6d5">operator&lt;&lt;</a>(ostream &amp; os, <span class="keyword">const</span> <a class="code" href="class_pais.html">Pais</a> &amp;P){</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      os&lt;&lt;P.p&lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt;P.pais&lt;&lt;<span class="stringliteral">&quot; &quot;</span>&lt;&lt;P.bandera&lt;&lt;endl;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <span class="keywordflow">return</span> os;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;};</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_pais_html_a16af2b45eb9d07e7292a58556edc9371"><div class="ttname"><a href="class_pais.html#a16af2b45eb9d07e7292a58556edc9371">Pais::Pais</a></div><div class="ttdeci">Pais()</div><div class="ttdoc">Constructor por defecto de Pais.</div><div class="ttdef"><b>Definition:</b> pais.h:28</div></div>
+<div class="ttc" id="aclass_punto_html"><div class="ttname"><a href="class_punto.html">Punto</a></div><div class="ttdoc">Clase Punto la cual esta formada por la latitud, la longitud y una breve descripcion.</div><div class="ttdef"><b>Definition:</b> punto.h:20</div></div>
+<div class="ttc" id="aclass_pais_html_a6d1c962b239638bd10f4a58a5aeaa6d5"><div class="ttname"><a href="class_pais.html#a6d1c962b239638bd10f4a58a5aeaa6d5">Pais::operator&lt;&lt;</a></div><div class="ttdeci">friend ostream &amp; operator&lt;&lt;(ostream &amp;os, const Pais &amp;P)</div><div class="ttdoc">Operador que imprime un pais por pantalla.</div><div class="ttdef"><b>Definition:</b> pais.h:95</div></div>
+<div class="ttc" id="aclass_pais_html"><div class="ttname"><a href="class_pais.html">Pais</a></div><div class="ttdoc">Clase Pais, la cual esta formada por un punto, el nombre del país y la bandera asignada.</div><div class="ttdef"><b>Definition:</b> pais.h:17</div></div>
+<div class="ttc" id="apunto_8h_html"><div class="ttname"><a href="punto_8h.html">punto.h</a></div><div class="ttdoc">Fichero cabecera para el TDA Punto.</div></div>
+<div class="ttc" id="aclass_pais_html_aacd6663db9fb049ff7041c93f4bdbf6a"><div class="ttname"><a href="class_pais.html#aacd6663db9fb049ff7041c93f4bdbf6a">Pais::operator&gt;&gt;</a></div><div class="ttdeci">friend istream &amp; operator&gt;&gt;(istream &amp;is, Pais &amp;P)</div><div class="ttdoc">Operador que almacena un pais.</div><div class="ttdef"><b>Definition:</b> pais.h:81</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

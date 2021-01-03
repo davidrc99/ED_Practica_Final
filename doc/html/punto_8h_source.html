@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>PrácticaFinal-RutasAéreas: Fichero Fuente include/punto.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">PrácticaFinal-RutasAéreas
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Buscar');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">punto.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="punto_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef __PUNTO__</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define __PUNTO__</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_punto.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_punto.html">Punto</a>{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keywordtype">double</span> lat; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">double</span> lng; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">string</span> descripcion; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">void</span> Copiar(<span class="keyword">const</span> <a class="code" href="class_punto.html">Punto</a> &amp;p){</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    lat = p.lat;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    lng = p.lng;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    descripcion = p.descripcion;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">void</span> QuitaSeparadores(istream &amp;is){</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">while</span>(is &amp;&amp; (is.peek()==<span class="charliteral">&#39;\t&#39;</span> || is.peek()==<span class="charliteral">&#39; &#39;</span> || is.peek()==<span class="charliteral">&#39;\n&#39;</span>))</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      is.get();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <a class="code" href="class_punto.html">Punto</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;  <a class="code" href="class_punto.html">Punto</a>(<span class="keywordtype">double</span> lat_n, <span class="keywordtype">double</span> lng_n,<span class="keywordtype">string</span> des_n);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="class_punto.html">Punto</a>(<span class="keyword">const</span> <a class="code" href="class_punto.html">Punto</a> &amp;p);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordtype">double</span> GetLongitud()<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordtype">double</span> GetLatitud()<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;  <span class="keywordtype">string</span> GetDescripcion();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <span class="keywordtype">void</span> SetLongitud(<span class="keywordtype">double</span> valor);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordtype">void</span> SetLatitud(<span class="keywordtype">double</span> valor);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  <span class="keywordtype">void</span> SetDescripcion(<span class="keywordtype">string</span> valor);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;  <a class="code" href="class_punto.html">Punto</a> &amp; operator=(<span class="keyword">const</span> <a class="code" href="class_punto.html">Punto</a> &amp;p);</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="class_punto.html">Punto</a> &amp;p)<span class="keyword">const</span> ;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;  <span class="keywordtype">bool</span> operator!=(<span class="keyword">const</span> <a class="code" href="class_punto.html">Punto</a> &amp;p)<span class="keyword">const</span> ;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="class_punto.html#a3f05fcfa9cd01b94bdcff7e6c3da90b5">  139</a></span>&#160;  <span class="keyword">friend</span> ostream &amp; <a class="code" href="class_punto.html#a3f05fcfa9cd01b94bdcff7e6c3da90b5">operator&lt;&lt;</a>(ostream &amp; os, <span class="keyword">const</span> <a class="code" href="class_punto.html">Punto</a> &amp; P){</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    os &lt;&lt; <span class="stringliteral">&quot;(&quot;</span> &lt;&lt; P.lat &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; P.lng &lt;&lt; <span class="stringliteral">&quot;)&quot;</span>;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="keywordflow">return</span> os;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;  }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="class_punto.html#a579abdf5a20ea89e04074cd2cfea02cd">  150</a></span>&#160;  <span class="keyword">friend</span> istream &amp; <a class="code" href="class_punto.html#a579abdf5a20ea89e04074cd2cfea02cd">operator&gt;&gt;</a>(istream &amp; is, <a class="code" href="class_punto.html">Punto</a> &amp; P){</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="keywordtype">string</span> lat,lng;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">string</span> aux;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    getline(is,aux,<span class="charliteral">&#39;(&#39;</span>);</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    getline(is,lat,<span class="charliteral">&#39;,&#39;</span>);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    getline(is,lng,<span class="charliteral">&#39;)&#39;</span>);</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordtype">double</span> lat_d = stod(lat);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordtype">double</span> lng_d = stod(lng);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    P.<a class="code" href="class_punto.html#a38b6d80a5eb7319f0776ecb9072063f8">SetLatitud</a>(lat_d);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    P.<a class="code" href="class_punto.html#a57a9b046600d10eb474d759ad111715d">SetLongitud</a>(lng_d);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">return</span> is;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;  }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;};</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;<span class="preprocessor">#endif</span></div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_punto_html"><div class="ttname"><a href="class_punto.html">Punto</a></div><div class="ttdoc">Clase Punto la cual esta formada por la latitud, la longitud y una breve descripcion.</div><div class="ttdef"><b>Definition:</b> punto.h:20</div></div>
+<div class="ttc" id="aclass_punto_html_a57a9b046600d10eb474d759ad111715d"><div class="ttname"><a href="class_punto.html#a57a9b046600d10eb474d759ad111715d">Punto::SetLongitud</a></div><div class="ttdeci">void SetLongitud(double valor)</div><div class="ttdoc">Establece la longitud de un punto.</div><div class="ttdef"><b>Definition:</b> punto.cpp:41</div></div>
+<div class="ttc" id="aclass_punto_html_a579abdf5a20ea89e04074cd2cfea02cd"><div class="ttname"><a href="class_punto.html#a579abdf5a20ea89e04074cd2cfea02cd">Punto::operator&gt;&gt;</a></div><div class="ttdeci">friend istream &amp; operator&gt;&gt;(istream &amp;is, Punto &amp;P)</div><div class="ttdoc">Operador que almacena un punto.</div><div class="ttdef"><b>Definition:</b> punto.h:150</div></div>
+<div class="ttc" id="aclass_punto_html_a38b6d80a5eb7319f0776ecb9072063f8"><div class="ttname"><a href="class_punto.html#a38b6d80a5eb7319f0776ecb9072063f8">Punto::SetLatitud</a></div><div class="ttdeci">void SetLatitud(double valor)</div><div class="ttdoc">Establece la latitud de un punto.</div><div class="ttdef"><b>Definition:</b> punto.cpp:45</div></div>
+<div class="ttc" id="aclass_punto_html_a3f05fcfa9cd01b94bdcff7e6c3da90b5"><div class="ttname"><a href="class_punto.html#a3f05fcfa9cd01b94bdcff7e6c3da90b5">Punto::operator&lt;&lt;</a></div><div class="ttdeci">friend ostream &amp; operator&lt;&lt;(ostream &amp;os, const Punto &amp;P)</div><div class="ttdoc">Operador que imprime un punto por pantalla.</div><div class="ttdef"><b>Definition:</b> punto.h:139</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>

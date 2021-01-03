@@ -1,0 +1,166 @@
+\hypertarget{class_pais}{}\doxysection{Referencia de la Clase Pais}
+\label{class_pais}\index{Pais@{Pais}}
+
+
+Clase \mbox{\hyperlink{class_pais}{Pais}}, la cual esta formada por un punto, el nombre del país y la bandera asignada.  
+
+
+
+
+{\ttfamily \#include $<$pais.\+h$>$}
+
+\doxysubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pais_a16af2b45eb9d07e7292a58556edc9371}{Pais}} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto de \mbox{\hyperlink{class_pais}{Pais}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_punto}{Punto}} \mbox{\hyperlink{class_pais_ab0f1ede55db35d15670a1c4210fd013d}{Get\+Punto}} () const
+\item 
+string \mbox{\hyperlink{class_pais_aff8c3008945f2dae8d360c700f796243}{Get\+Pais}} () const
+\item 
+string \mbox{\hyperlink{class_pais_a0ba2a78d564f6ea016e88326b37d6ae3}{Get\+Bandera}} () const
+\item 
+bool \mbox{\hyperlink{class_pais_a44adc983241faeaa4838ec878db5b314}{operator$<$}} (const \mbox{\hyperlink{class_pais}{Pais}} \&P) const
+\item 
+bool \mbox{\hyperlink{class_pais_a3588e3a03eb40933a5eb576dbac0dfc5}{operator==}} (const \mbox{\hyperlink{class_pais}{Pais}} \&P) const
+\item 
+bool \mbox{\hyperlink{class_pais_af55cc0a93e1a807e1291265d2c9b986a}{operator==}} (const \mbox{\hyperlink{class_punto}{Punto}} \&P) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+istream \& \mbox{\hyperlink{class_pais_aacd6663db9fb049ff7041c93f4bdbf6a}{operator$>$$>$}} (istream \&is, \mbox{\hyperlink{class_pais}{Pais}} \&P)
+\begin{DoxyCompactList}\small\item\em Operador que almacena un pais. \end{DoxyCompactList}\item 
+ostream \& \mbox{\hyperlink{class_pais_a6d1c962b239638bd10f4a58a5aeaa6d5}{operator$<$$<$}} (ostream \&os, const \mbox{\hyperlink{class_pais}{Pais}} \&P)
+\begin{DoxyCompactList}\small\item\em Operador que imprime un pais por pantalla. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripción detallada}
+Clase \mbox{\hyperlink{class_pais}{Pais}}, la cual esta formada por un punto, el nombre del país y la bandera asignada. 
+
+\doxysubsection{Documentación del constructor y destructor}
+\mbox{\Hypertarget{class_pais_a16af2b45eb9d07e7292a58556edc9371}\label{class_pais_a16af2b45eb9d07e7292a58556edc9371}} 
+\index{Pais@{Pais}!Pais@{Pais}}
+\index{Pais@{Pais}!Pais@{Pais}}
+\doxysubsubsection{\texorpdfstring{Pais()}{Pais()}}
+{\footnotesize\ttfamily Pais\+::\+Pais (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor por defecto de \mbox{\hyperlink{class_pais}{Pais}}. 
+
+bandera asignada 
+
+\doxysubsection{Documentación de las funciones miembro}
+\mbox{\Hypertarget{class_pais_a0ba2a78d564f6ea016e88326b37d6ae3}\label{class_pais_a0ba2a78d564f6ea016e88326b37d6ae3}} 
+\index{Pais@{Pais}!GetBandera@{GetBandera}}
+\index{GetBandera@{GetBandera}!Pais@{Pais}}
+\doxysubsubsection{\texorpdfstring{GetBandera()}{GetBandera()}}
+{\footnotesize\ttfamily string Pais\+::\+Get\+Bandera (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Obtener la bandera del pais \begin{DoxyReturn}{Devuelve}
+Devuelve un string con la bandera 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pais_aff8c3008945f2dae8d360c700f796243}\label{class_pais_aff8c3008945f2dae8d360c700f796243}} 
+\index{Pais@{Pais}!GetPais@{GetPais}}
+\index{GetPais@{GetPais}!Pais@{Pais}}
+\doxysubsubsection{\texorpdfstring{GetPais()}{GetPais()}}
+{\footnotesize\ttfamily string Pais\+::\+Get\+Pais (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Obtener el nombre del pais \begin{DoxyReturn}{Devuelve}
+Devuelve un string con el nombre 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pais_ab0f1ede55db35d15670a1c4210fd013d}\label{class_pais_ab0f1ede55db35d15670a1c4210fd013d}} 
+\index{Pais@{Pais}!GetPunto@{GetPunto}}
+\index{GetPunto@{GetPunto}!Pais@{Pais}}
+\doxysubsubsection{\texorpdfstring{GetPunto()}{GetPunto()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_punto}{Punto}} Pais\+::\+Get\+Punto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Obtener las coordenadas del pais \begin{DoxyReturn}{Devuelve}
+Devuelve un objeto \mbox{\hyperlink{class_punto}{Punto}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pais_a44adc983241faeaa4838ec878db5b314}\label{class_pais_a44adc983241faeaa4838ec878db5b314}} 
+\index{Pais@{Pais}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Pais@{Pais}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Pais\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_pais}{Pais}} \&}]{P }\end{DoxyParamCaption}) const}
+
+Operador que ordena alfabeticamente 
+\begin{DoxyParams}{Parámetros}
+{\em P} & pais a comparar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve true si esta alfabeticamente por debajo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pais_a3588e3a03eb40933a5eb576dbac0dfc5}\label{class_pais_a3588e3a03eb40933a5eb576dbac0dfc5}} 
+\index{Pais@{Pais}!operator==@{operator==}}
+\index{operator==@{operator==}!Pais@{Pais}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Pais\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_pais}{Pais}} \&}]{P }\end{DoxyParamCaption}) const}
+
+Operador que compara dos paises 
+\begin{DoxyParams}{Parámetros}
+{\em P} & pais a comparar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve true si son iguales y false en caso contrario 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_pais_af55cc0a93e1a807e1291265d2c9b986a}\label{class_pais_af55cc0a93e1a807e1291265d2c9b986a}} 
+\index{Pais@{Pais}!operator==@{operator==}}
+\index{operator==@{operator==}!Pais@{Pais}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Pais\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_punto}{Punto}} \&}]{P }\end{DoxyParamCaption}) const}
+
+Operador que compara dos puntos 
+\begin{DoxyParams}{Parámetros}
+{\em P} & \mbox{\hyperlink{class_punto}{Punto}} a comparar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve true si son iguales y false en caso contrario 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentación de las funciones relacionadas y clases amigas}
+\mbox{\Hypertarget{class_pais_a6d1c962b239638bd10f4a58a5aeaa6d5}\label{class_pais_a6d1c962b239638bd10f4a58a5aeaa6d5}} 
+\index{Pais@{Pais}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Pais@{Pais}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_pais}{Pais}} \&}]{P }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operador que imprime un pais por pantalla. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em os} & los datos de salida que imprime \\
+\hline
+{\em P} & \mbox{\hyperlink{class_pais}{Pais}} a mostrar por pantalla \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_pais_aacd6663db9fb049ff7041c93f4bdbf6a}\label{class_pais_aacd6663db9fb049ff7041c93f4bdbf6a}} 
+\index{Pais@{Pais}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Pais@{Pais}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily istream\& operator$>$$>$ (\begin{DoxyParamCaption}\item[{istream \&}]{is,  }\item[{\mbox{\hyperlink{class_pais}{Pais}} \&}]{P }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operador que almacena un pais. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em is} & los datos de entrada \\
+\hline
+{\em P} & \mbox{\hyperlink{class_pais}{Pais}} el cual se va a almacenar sus parametros \\
+\hline
+\end{DoxyParams}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{pais_8h}{pais.\+h}}\item 
+src/\mbox{\hyperlink{pais_8cpp}{pais.\+cpp}}\end{DoxyCompactItemize}

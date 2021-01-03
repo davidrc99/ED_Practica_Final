@@ -1,7 +1,7 @@
 /**
   * @file imagenES.h
   * @brief Fichero cabecera para la E/S de imágenes
-  *
+  * @author Blanca Abril González y David Román Castellano
   * Permite la E/S de archivos de tipos PGM,PPM
   *
   */
@@ -43,7 +43,7 @@ TipoImagen LeerTipoImagen(const char nombre[], int& filas, int& columnas);
   * @param columnas Parámetro de salida con las columnas de la imagen.
   * @param buffer Zona de memoria para obtener el valor de cada uno de los píxeles
   * como tripletas consecutivas en formato RGB (RGBRGBRGB...) por filas
-  * desde la esquina superior izqda a la inferior drcha. 
+  * desde la esquina superior izqda a la inferior drcha.
   * @return si ha  tenido éxito en la lectura
   * @pre buffer debe ser una zona de memoria suficientemente grande como para
   * almacenar @a filas x @a columnas x 3  * bytes de datos de la imagen.
@@ -70,7 +70,7 @@ bool EscribirImagenPPM (const char nombre[], const unsigned char datos[], int f,
   * @param filas Parámetro de salida con las filas de la imagen.
   * @param columnas Parámetro de salida con las columnas de la imagen.
   * @param buffer Zona de memoria para obtener el valor de cada uno de los píxeles
-  * como un valor de gris desde la esquina superior izqda a la inferior drcha. 
+  * como un valor de gris desde la esquina superior izqda a la inferior drcha.
   * @return si ha  tenido éxito en la lectura
   * @pre buffer debe ser una zona de memoria suficientemente grande como para
   * almacenar @a filas x @a columnas bytes de datos de la imagen.
@@ -93,4 +93,3 @@ bool EscribirImagenPGM (const char nombre[], const unsigned char datos[], int f,
 #endif
 
 /* Fin Fichero: imagenES.h */
-
