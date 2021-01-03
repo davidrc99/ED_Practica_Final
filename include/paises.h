@@ -110,7 +110,7 @@ class Paises{
 	iterator find(const Punto &p){
 	    iterator it;
 	    set<Pais>::iterator i;
-	    for (i=datos.begin(); i!=datos.end() && !((*i)==p);++i);
+	    for (i=datos.begin(); i!=datos.end() && !((*i).GetPunto()==p);++i);
 	    it.p=i;
 	    return it;
 	}

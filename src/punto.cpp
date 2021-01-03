@@ -18,11 +18,11 @@ Punto::Punto(const Punto &p){
   Copiar(p);
 }
 
-double Punto::GetLongitud(){
+double Punto::GetLongitud()const{
   return lng;
 }
 
-double Punto::GetLatitud(){
+double Punto::GetLatitud()const{
   return lat;
 }
 

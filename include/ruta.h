@@ -24,7 +24,7 @@ class Ruta{
 
     list<Punto> GetListaPuntos();
 
-    string GetCodigo();
+    string GetCodigo() const;
 
     bool estaPunto(const Punto & p);
 
@@ -42,6 +42,8 @@ class Ruta{
 
     bool operator!=(const Ruta &r)const;
 
+    void QuitaSeparadores(istream &is);
+
     friend ostream & operator<<(ostream & os, const Ruta & r){
       // os << r.codigo << " ";
       list<Punto>::const_iterator it;
@@ -52,18 +54,20 @@ class Ruta{
     }
 
     friend istream & operator>>(istream & is, Ruta & r){
-      string codigo_n;
-      list<Punto> puntos_n;
       int tamanio;
-      Punto punto_aux;
-      is >> codigo_n >> tamanio;
+      string codigo_n;
+      Punto plocal;
+      Ruta rlocal;
+      is >> codigo_n>> tamanio;
+      rlocal.codigo = codigo_n;
       for (int i = 0; i < tamanio; i++) {
-        is >> punto_aux;
-        puntos_n.push_back(punto_aux);
+        is >> plocal;
+        rlocal.puntos.push_back(plocal);
       }
-      r.codigo = codigo_n;
-      r.puntos = puntos_n;
+      r=rlocal;
       return is;
+
+
     }
     //////////////////
     class iterator{
@@ -91,6 +95,10 @@ class Ruta{
         r=it.r;
         return *this;
       }
+
+      const Punto & operator*(){
+        return *r;
+     }
 
       friend class Ruta;
       friend class const_iterator;
@@ -147,9 +155,10 @@ class Ruta{
         return it.r !=r;
       }
 
-      //  const Ruta & operator*()const{
-      //    return *r;
-      // }
+       const Punto & operator*()const{
+         return *r;
+      }
+
       friend class Ruta;
       friend class iterator;
     };

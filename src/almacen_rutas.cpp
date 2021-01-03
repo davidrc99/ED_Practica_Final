@@ -9,11 +9,11 @@ Ruta Almacen_rutas::GetRuta(string codigo){
   return (*it).second;
 }
 
-void Almacen_rutas::Insertar(const string &clave, const Ruta &ruta){
+void Almacen_rutas::Insertar(const Ruta &ruta){
   map<string,Ruta>::iterator it;
-  it = rutas.find(clave);
+  it = rutas.find(ruta.GetCodigo());
   if((*it).second!=ruta){
-    rutas.insert(pair<string,Ruta>(clave,ruta));
+    rutas.insert(pair<string,Ruta>(ruta.GetCodigo(),ruta));
   }else{
     cout << "[ERROR] Ya existe" << endl;
   }
@@ -43,4 +43,9 @@ Almacen_rutas & Almacen_rutas::operator=(const Almacen_rutas &Ar){
       rutas = Ar.rutas;
   }
   return *this;
+}
+
+void Almacen_rutas::QuitaSeparadores(istream &is){
+  while (is &&(is.peek()=='\t'|| is.peek()==' '|| is.peek()=='\n'))
+    is.get();
 }

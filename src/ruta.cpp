@@ -17,7 +17,7 @@ list<Punto> Ruta::GetListaPuntos(){
   return puntos;
 }
 
-string Ruta::GetCodigo(){
+string Ruta::GetCodigo()const{
   return codigo;
 }
 
@@ -91,4 +91,9 @@ bool Ruta::operator!=(const Ruta &r)const{
 
     return false;
   }
+}
+
+void Ruta::QuitaSeparadores(istream &is){
+  while (is &&(is.peek()=='\t'|| is.peek()==' '|| is.peek()=='\n'))
+    is.get();
 }

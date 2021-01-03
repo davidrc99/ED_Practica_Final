@@ -5,17 +5,20 @@
 #include <map>
 #include <iostream>
 using namespace std;
+
+
+
 class Almacen_rutas{
 private:
   map<string,Ruta> rutas;
 public:
   Almacen_rutas(){}
-
   Ruta GetRuta(string codigo);
   list<Ruta> GetRutas(Punto punto);
-  void Insertar(const string &clave, const Ruta &ruta);
+  void Insertar(const Ruta &ruta);
   void Borrar(const string &clave);
   Almacen_rutas & operator=(const Almacen_rutas &Ar);
+  void QuitaSeparadores(istream &is);
   friend ostream & operator<<(ostream & os, const Almacen_rutas &Ar){
     map<string,Ruta>::const_iterator it;
     for ( it = Ar.rutas.begin(); it != Ar.rutas.end(); it++) {
@@ -26,28 +29,25 @@ public:
     return os;
   }
   friend istream & operator>>(istream & is, Almacen_rutas &Ar){
-    int num_rutas;
-    if(!Ar.rutas.empty()){
-      Ar.rutas.clear();
+    Almacen_rutas arlocal;
+    string a;
+    is>>a;
+    if (a=="#Rutas"){
+  Ruta rlocal;
+  bool salir=false;
+  arlocal.QuitaSeparadores(is);
+  while (!salir){
+    if (is.peek()!='#' && is){
+        is>>rlocal;                     //operador >> para leer una ruta concreta
+        arlocal.Insertar(rlocal); //función de insertar una ruta
+        arlocal.QuitaSeparadores(is);
     }
-    if (is.peek()=='#'){
-      string a;
-      getline(is,a);
+    else salir=true;
+  }
     }
-    if (is.peek()=='/'){
-      string num_rutas_str;
-      is.ignore();
-      getline(is,num_rutas_str);
-      num_rutas = atoi(num_rutas_str.c_str());
-    }
-    Ruta R;
-    for (int i = 0; i < num_rutas; i++){
-        is >> R;
-        Ar.Insertar(R.GetCodigo(),R);
-      }
+    Ar=arlocal;
     return is;
   }
-
   //////////////////
   class iterator{
   private:

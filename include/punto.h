@@ -28,9 +28,9 @@ public:
 
   Punto(const Punto &p);
 
-  double GetLongitud();
+  double GetLongitud()const;
 
-  double GetLatitud();
+  double GetLatitud()const;
 
   string GetDescripcion();
 
@@ -52,13 +52,12 @@ public:
   }
 
   friend istream & operator>>(istream & is, Punto & P){
-    //QuitaSeparadores(is);
     string lat,lng;
     string aux;
 
-    getline(cin,aux,'(');
-    getline(cin,lat,',');
-    getline(cin,lng,')');
+    getline(is,aux,'(');
+    getline(is,lat,',');
+    getline(is,lng,')');
 
     double lat_d = stod(lat);
     double lng_d = stod(lng);

@@ -6,7 +6,7 @@ Práctica Final de la Asignatura de Estructura de Datos - Rutas Aéreas
 make documentacion
 make clean
 make rebuild
-make all
+make #para ejecutar el programa
 ```
 
 ## Autores

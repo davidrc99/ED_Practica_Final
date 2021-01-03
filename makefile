@@ -9,7 +9,7 @@ FLAGS = -Wall -g -I$(INC) -c
 compilador:=g++
 
 main: $(BIN)/rutas_aereas
-	./$(BIN)/rutas_aereas ./$(DATOS)/paises.txt ./$(DATOS)/imagenes/mapas/mapa1.ppm  ./$(DATOS)/imagenes/banderas ./$(DATOS)/almacen_rutas.txt ./$(DATOS)/imagenes/aviones/avion1.ppm ./$(DATOS)/imagenes/aviones/macara_avion1.ppm
+	./$(BIN)/rutas_aereas ./$(DATOS)/paises.txt ./$(DATOS)/imagenes/mapas/mapa1.ppm  ./$(DATOS)/imagenes/banderas ./$(DATOS)/almacen_rutas.txt ./$(DATOS)/imagenes/aviones/avion2.ppm ./$(DATOS)/imagenes/aviones/macara_avion2.pgm
 
 $(BIN)/rutas_aereas: $(OBJ)/rutas_aereas.o $(LIB)/libfunciones.a
 	$(compilador) -o $@ $< -lfunciones -L$(LIB)
