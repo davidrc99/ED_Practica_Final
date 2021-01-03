@@ -1,11 +1,20 @@
+/**
+  * @file imagen.cpp
+  * @brief Fichero con definiciones para el TDA Imagen
+  *
+  * Funciones de la clase Imagen
+  *
+  */
+
 #include "../include/imagen.h"
 #include "../include/imagenES.h"
+// _____________________________________________________________________________
 void Imagen::Borrar(){
   for (int i=0;i<nf;i++)
     delete[]data[i];
   delete []data;
 }
-/*********************************/
+// _____________________________________________________________________________
 void Imagen::Copiar(const Imagen &I){
 
    nf = I.nf;
@@ -19,13 +28,12 @@ void Imagen::Copiar(const Imagen &I){
   }
 
 }
-/*********************************/
+// _____________________________________________________________________________
 Imagen::Imagen(){
   data=0;
   nf=nc=0;
 }
-
-/*********************************/
+// _____________________________________________________________________________
 Imagen::Imagen(int f,int c){
   nf = f;
   nc = c;
@@ -42,7 +50,7 @@ Imagen::Imagen(int f,int c){
 
 
 }
-/*********************************/
+// _____________________________________________________________________________
 Imagen & Imagen::operator=(const Imagen & I){
    if (this!=&I){
 	Borrar();
@@ -50,23 +58,23 @@ Imagen & Imagen::operator=(const Imagen & I){
    }
    return * this;
 }
-/*********************************/
+// _____________________________________________________________________________
 Imagen::~Imagen(){
   Borrar();
 }
 
-/*********************************/
+// _____________________________________________________________________________
 Pixel & Imagen::operator()(int i,int j){
   assert(i>=0 && i<nf && j>=0 && j<nc*3);
   return data[i][j];
 }
-/*********************************/
+// _____________________________________________________________________________
 const Pixel & Imagen::operator()(int i,int j)const{
   assert(i>=0 && i<nf && j>=0 && j<nc);
   return data[i][j];
 }
 
-/*********************************/
+// _____________________________________________________________________________
 void Imagen::EscribirImagen(const char * nombre){
       unsigned char * aux = new unsigned char [nf*nc*3];
       unsigned char * m = new unsigned char [nf*nc];
@@ -102,7 +110,7 @@ void Imagen::EscribirImagen(const char * nombre){
       delete []m;
 
 }
-/*********************************/
+// _____________________________________________________________________________
 void Imagen::LeerImagen(const char * nombre,const string &nombremascara){
       int f,c;
       unsigned char * aux,*aux_mask ;
@@ -141,7 +149,7 @@ void Imagen::LeerImagen(const char * nombre,const string &nombremascara){
       delete []aux;
 
 }
-/*********************************/
+// _____________________________________________________________________________
 void Imagen::LimpiarTransp(){
     for (int i=0;i<nf;i++)
       for (int j=0;j<nc;j++)
@@ -150,7 +158,7 @@ void Imagen::LimpiarTransp(){
 }
 
 
-/*********************************/
+// _____________________________________________________________________________
 void Imagen::PutImagen(int posi,int posj, const Imagen &I,Tipo_Pegado tippegado){
     //assert(nf>=posi+I.nf && nc>=posj+I.nc);
 
@@ -170,6 +178,7 @@ void Imagen::PutImagen(int posi,int posj, const Imagen &I,Tipo_Pegado tippegado)
 	}
 
 }
+// _____________________________________________________________________________
 Imagen Imagen::ExtraeImagen(int posi,int posj,int dimi,int dimj){
    Imagen Iaux(dimi,dimj);
    for (int i=posi;i<dimi;i++)

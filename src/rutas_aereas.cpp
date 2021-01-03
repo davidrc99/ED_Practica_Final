@@ -1,3 +1,11 @@
+/**
+  * @file rutas_aereas.cpp
+  * @brief Fichero de prueba para probar la práctica Final
+  *
+  * En este ejemplo se muestra la ruta que se escriba en una imagen de salida
+  *
+  */
+
 #include "../include/punto.h"
 #include "../include/paises.h"
 #include "../include/almacen_rutas.h"
@@ -7,7 +15,7 @@
 #include <fstream>
 using namespace std;
 
-
+// _____________________________________________________________________________
 Imagen Rota(const Imagen & Io,double angulo){
     double rads=angulo;
     double coseno = cos(angulo);
@@ -80,6 +88,8 @@ Imagen Rota(const Imagen & Io,double angulo){
     return Iout;
 
 }
+// _____________________________________________________________________________
+
 void Pintar( int f1,int f2,int c1,int c2,Imagen &I, const Imagen &avion,int mindisf,int mindisc){
 
       int fila,col;
@@ -117,7 +127,7 @@ void Pintar( int f1,int f2,int c1,int c2,Imagen &I, const Imagen &avion,int mind
 
 }
 
-
+// _____________________________________________________________________________
 int main(int argc, char * argv[]){
   if (argc!=7){
       cout<<"Los parametros son:"<<endl;
@@ -193,3 +203,4 @@ int main(int argc, char * argv[]){
   I.EscribirImagen(nsal.c_str());
 
 }
+// _____________________________________________________________________________
