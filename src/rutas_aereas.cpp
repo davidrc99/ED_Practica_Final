@@ -54,9 +54,6 @@ Imagen Rota(const Imagen & Io,double angulo){
 		    new_col_max=inter1;
 	    }
 
-
-
-
     newimgrows=(unsigned)ceil((double)new_row_max-new_row_min);
     newimgcols=(unsigned)ceil((double)new_col_max-new_col_min);
 
@@ -143,7 +140,6 @@ int main(int argc, char * argv[]){
   Paises Pses;
   ifstream f (argv[1]);
   f>>Pses;
-  //cout<<Pses;
   Imagen I;
   I.LeerImagen(argv[2]);
 
