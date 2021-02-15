@@ -9,6 +9,8 @@ make rebuild
 make #para ejecutar el programa
 ```
 
+Nota Final: 10 / 10
+
 ## Autores
 - Blanca Abril González
 - David Román Castellano
